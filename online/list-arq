@@ -7,3 +7,4 @@ GESTOR = gestor.sh
 PAYLOAD = paysnd.sh
 ULTRAHOST = ultrahost
 UTILS = utils.sh
+SPEEDTEST = speed.sh
