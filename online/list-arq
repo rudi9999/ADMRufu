@@ -4,3 +4,6 @@ DNS NETFLIX = dns-netflix.sh
 FAI2BAN = fai2ban.sh
 PASS SQUID = squidpass.sh
 GESTOR = gestor.sh
+PAYLOAD = paysnd.sh
+ULTRAHOST = ultrahost
+UTILS = utils.sh
