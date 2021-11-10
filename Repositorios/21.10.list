@@ -1,0 +1,12 @@
+## Ubuntu 21.10
+
+deb http://us.archive.ubuntu.com/ubuntu/ impish main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ impish-updates main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ impish universe
+deb http://us.archive.ubuntu.com/ubuntu/ impish-updates universe
+deb http://us.archive.ubuntu.com/ubuntu/ impish multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ impish-updates multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ impish-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu impish-security main restricted
+deb http://security.ubuntu.com/ubuntu impish-security universe
+deb http://security.ubuntu.com/ubuntu impish-security multiverse
