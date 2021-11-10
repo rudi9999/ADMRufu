@@ -115,6 +115,7 @@ os_system(){
 }
 
 dependencias(){
+  apt update -y &>/dev/null
 	soft="zip unzip ufw curl python python3 python3-pip screen lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
 
 	for i in $soft; do
@@ -272,9 +273,9 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    echo "${ADMRufu}/menu" > /usr/bin/adm && chmod +x /usr/bin/adm
    echo "${ADMRufu}/menu" > /usr/bin/ADMRufu && chmod +x /usr/bin/ADMRufu
 
-   echo '[[ -e "/etc/ADMRufu/tmp/message.txt" ]] && mess1="$(less /etc/ADMRufu/tmp/message.txt)"' >> /root/.bashrc
-   echo '[[ -z "$mess1" ]] && mess1="@Rufu99"' >> /root/.bashrc
-   echo 'clear && echo -e "\n$(figlet -f big.flf "  ADMRufu")\n        RESELLER : $mess1 \n\n   Para iniciar ADMRufu escriba:  menu \n\n"|lolcat' >> /root/.bashrc
+   echo '[[ -e "/etc/ADMRufu/tmp/message.txt" ]] && mess1="$(less /etc/ADMRufu/tmp/message.txt)"' >> /etc/bash.bashrc
+   echo '[[ -z "$mess1" ]] && mess1="@Rufu99"' >> /etc/bash.bashrc
+   echo 'clear && echo -e "\n$(figlet -f big.flf "  ADMRufu")\n        RESELLER : $mess1 \n\n   Para iniciar ADMRufu escriba:  menu \n\n"|lolcat' >> /etc/bash.bashrc
 
    clear
    title "-- ADMRufu INSTALADO --"
