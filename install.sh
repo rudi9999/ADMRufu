@@ -86,36 +86,22 @@ title(){
  }
 
 os_system(){
-  system=$(cat -n /etc/issue |grep 1 |cut -d' ' -f6,7,8 |sed 's/1//' |sed 's/      //'|awk '{print $1, $2}')
+  system=$(cat -n /etc/issue |grep 1 |cut -d ' ' -f6,7,8 |sed 's/1//' |sed 's/      //')
+  distro=$(echo "$system"|awk '{print $1}')
 
-  nombre=$(echo $system|awk '{print $1}')
-  vercion=$(echo $system|awk '{print $2}'|cut -d '.' -f1)
-
-  if [[ "$nombre" = "Ubuntu" ]]; then
-  	if [[ "$vercion" = "14" ]]; then
-  		ver="14"
-  	elif [[ "$vercion" = "16" ]]; then
-  		ver="16"
-  	elif [[ "$vercion" = "18" ]]; then
-  		ver="18"
-  	elif [[ "$vercion" = "20" ]]; then
-  		ver="20"
-  	fi
-  else
-  	ver="otro"
-  fi
-
-  case $ver in
-  	14);;
-  	16)wget -O /etc/apt/sources.list https://github.com/rudi9999/VPS-MX-8.1/raw/master/Repositorios/16.04/sources.list &> /dev/null;;
-  	18)wget -O /etc/apt/sources.list https://github.com/rudi9999/VPS-MX-8.1/raw/master/Repositorios/18.04/sources.list &> /dev/null;;
-  	20);;
+  case $distro in
+    Debian)vercion=$(echo $system|awk '{print $3}'|cut -d '.' -f1);;
+    Ubuntu)vercion=$(echo $system|awk '{print $2}'|cut -d '.' -f1,2);;
   esac
-  print_center -ama "$system"
+
+  link="https://raw.githubusercontent.com/rudi9999/ADMRufu/main/Repositorios/${vercion}.list"
+
+  case $vercion in
+    8|9|10|11|16.04|18.04|20.04|20.10|21.04|21.10|22.04)wget -O /etc/apt/sources.list ${link} &>/dev/null;;
+  esac
 }
 
 dependencias(){
-  apt update -y &>/dev/null
 	soft="zip unzip ufw curl python python3 python3-pip screen lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
 
 	for i in $soft; do
@@ -208,11 +194,11 @@ msg -ne " Desea continuar? [S/N]: "
 read opcion
 [[ "$opcion" != @(s|S) ]] && stop_install
 title "INSTALADOR ADMRufu"
-add-apt-repository universe
+os_system
 apt update -y
 apt upgrade -y
 title "INSTALADOR ADMRufu"
-os_system
+print_center -ama "$distro $vercion"
 print_center -verd "INSTALANDO DEPENDENCIAS"
 msg -bar3
 dependencias
