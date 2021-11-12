@@ -102,7 +102,7 @@ os_system(){
 }
 
 dependencias(){
-	soft="zip unzip ufw curl python python3 python3-pip screen lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
+	soft="sudo zip unzip ufw curl python python3 python3-pip screen lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
 
 	for i in $soft; do
 		leng="${#i}"
@@ -237,19 +237,18 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    msg -verd " INSTALANDO SCRIPT ADMRufu... $(msg -ama "[Proyect by @Rufu99]")"
    REQUEST=$(ofus "$Key"|cut -d'/' -f2)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
-
+   msg -nama "Descarga de archivos...  "
    for arqx in $(cat $HOME/lista-arq); do
-   	echo -ne " $(msg -ama "Descargando:") $(msg -verm2 "[$arqx]") "
    	wget --no-check-certificate -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && {
-    echo -e "$(msg -verm2 "-") $(msg -verd "INSTALL")"
     verificar_arq "${arqx}"
    } || {
-    echo -e "$(msg -verm2 "-") $(msg -verd "FAIL")"
+    msg -verm2 "fallida!!!"
+    sleep 2s
     error_fun
    }
    done
-
-   sleep 1s
+   msg -verd "completa!!!"
+   sleep 2s
    rm $HOME/lista-arq
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
    rm -rf /usr/bin/menu
@@ -258,7 +257,9 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    echo "${ADMRufu}/menu" > /usr/bin/menu && chmod +x /usr/bin/menu
    echo "${ADMRufu}/menu" > /usr/bin/adm && chmod +x /usr/bin/adm
    echo "${ADMRufu}/menu" > /usr/bin/ADMRufu && chmod +x /usr/bin/ADMRufu
-
+   echo 'if [[ $(echo $PATH|grep "/usr/games") = "" ]]; then
+PATH=$PATH:/usr/games
+fi' >> /etc/bash.bashrc
    echo '[[ -e "/etc/ADMRufu/tmp/message.txt" ]] && mess1="$(less /etc/ADMRufu/tmp/message.txt)"' >> /etc/bash.bashrc
    echo '[[ -z "$mess1" ]] && mess1="@Rufu99"' >> /etc/bash.bashrc
    echo 'clear && echo -e "\n$(figlet -f big.flf "  ADMRufu")\n        RESELLER : $mess1 \n\n   Para iniciar ADMRufu escriba:  menu \n\n"|lolcat' >> /etc/bash.bashrc
