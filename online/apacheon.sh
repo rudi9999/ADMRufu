@@ -66,7 +66,7 @@ rm_online(){
 }
 
 Links(){
-    [[ -z $(ls /var/www/html) ]] && msg -bar || {
+    [[ -z $(ls /var/www/html) ]] && print_center -ama "SIN ARCHIVOS EN LINEA" || {
         for my_arqs in `ls /var/www/html`; do
             [[ "$my_arqs" = "index.html" ]] && continue
             [[ "$my_arqs" = "index.php" ]] && continue
