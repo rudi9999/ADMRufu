@@ -1,4 +1,5 @@
 #!/bin/bash
+exit 1
 #19/12/2019
 SCPdir="/etc/newadm" && [[ ! -d ${SCPdir} ]] && exit 1
 SCPusr="${SCPdir}/ger-user" && [[ ! -d ${SCPusr} ]] && mkdir ${SCPusr}
