@@ -1,6 +1,6 @@
-MONITOR DE TAREAS HTOP = monitor_htop.sh
+COMPARTIR ARCHIVO ONLINE \e[32m[working] = apacheon.sh
+MONITOR DE TAREAS HTOP \e[32m[working] = monitor_htop.sh
 ADMINISTAR MEDIENTE BOT DE TELEGAM = ADMbot.sh
-COMPARTIR ARCHIVO ONLINE = apacheon.sh
 DNS NETFLIX = dns-netflix.sh
 FAI2BAN = fai2ban.sh
 AUTENTIFICAR PROXY SQUID = squidpass.sh
