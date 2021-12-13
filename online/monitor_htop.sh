@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $(dpkg --get-selections|grep -w 'htop'|head -1) ]]; then
+if [[ $(dpkg --get-selections|grep -w 'htop'|head -1) = "" ]]; then
 	title "INSTALADO HTOP..."
 	if apt install htop -y &>/dev/null ; then
 		print_center -verd "Htop instalado"
