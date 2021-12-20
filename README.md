@@ -1,5 +1,5 @@
-# ADMRufu
-# En desarrollo
+# ADMRufu - En desarrollo
+# Instalar ADMRufu
 
 rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh*
 
