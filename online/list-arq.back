@@ -1,0 +1,12 @@
+COMPARTIR ARCHIVO ONLINE \e[32m[working] = apacheon.sh
+MONITOR DE TAREAS HTOP \e[32m[working] = monitor_htop.sh
+ADMINISTAR MEDIENTE BOT DE TELEGAM = ADMbot.sh
+DNS NETFLIX = dns-netflix.sh
+FAI2BAN = fai2ban.sh
+AUTENTIFICAR PROXY SQUID = squidpass.sh
+Pass Root/Add root/Horario/etc.. = gestor.sh
+PAYLOAD FUERZA BRUTA = paysnd.sh
+SCANNER DE SUBDOMINIO = ultrahost
+Limpiar/Cache/Ram/Librerias/etc.. = utils.sh
+PRUEBA DE VELOCIDAD = speed.sh
+FIREWALL PARA VPS = blockBT.sh
