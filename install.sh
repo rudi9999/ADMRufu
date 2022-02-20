@@ -7,6 +7,12 @@ wget -O ${module} "https://raw.githubusercontent.com/rudi9999/Herramientas/main/
 chmod +x ${module} &>/dev/null
 source ${module}
 
+CTRL_C(){
+  rm -rf ${module}; exit
+}
+
+trap "CTRL_C" INT TERM EXIT
+
 ADMRufu="/etc/ADMRufu" && [[ ! -d ${ADMRufu} ]] && mkdir ${ADMRufu}
 ADM_inst="${ADMRufu}/install" && [[ ! -d ${ADM_inst} ]] && mkdir ${ADM_inst}
 SCPinstal="$HOME/install"
@@ -166,6 +172,7 @@ install_start(){
 }
 
 install_continue(){
+  rm /root/install.sh &> /dev/null
   sed -i '/Rufu/d' /root/.bashrc
   sleep 2
   os_system
