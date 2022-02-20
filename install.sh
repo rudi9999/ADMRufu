@@ -40,10 +40,11 @@ os_system(){
     Debian)vercion=$(echo $system|awk '{print $3}'|cut -d '.' -f1);;
     Ubuntu)vercion=$(echo $system|awk '{print $2}'|cut -d '.' -f1,2);;
   esac
+}
 
-  link="https://raw.githubusercontent.com/rudi9999/ADMRufu/main/Repositorios/${vercion}.list"
-
-  case $vercion in
+repo(){
+  link="https://raw.githubusercontent.com/rudi9999/ADMRufu/main/Repositorios/$1.list"
+  case $1 in
     8|9|10|11|16.04|18.04|20.04|20.10|21.04|21.10|22.04)wget -O /etc/apt/sources.list ${link} &>/dev/null;;
   esac
 }
@@ -155,6 +156,7 @@ install_start(){
   [[ "$opcion" != @(s|S) ]] && stop_install
   title "INSTALADOR ADMRufu"
   os_system
+  repo "${vercion}"
   apt update -y; apt upgrade -y
   echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh"; chmod +x /root/install.sh; /root/install.sh --continue' >> /root/.bashrc
   title "INSTALADOR ADMRufu"
@@ -165,6 +167,8 @@ install_start(){
 
 install_continue(){
   sed -i '/Rufu/d' /root/.bashrc
+  sleep 2
+  os_system
   title "INSTALADOR ADMRufu"
   print_center -ama "$distro $vercion"
   print_center -verd "INSTALANDO DEPENDENCIAS"
