@@ -183,7 +183,7 @@ while :
 do
   case $1 in
     -s|--start)install_start;;
-    -c|--continue)install_continue;;
+    -c|--continue)install_continue; break;;
     *)exit;;
   esac
 done
