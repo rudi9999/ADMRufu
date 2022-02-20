@@ -164,7 +164,7 @@ install_start(){
   os_system
   repo "${vercion}"
   apt update -y; apt upgrade -y
-  echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh"; chmod +x /root/install.sh; /root/install.sh --continue' >> /root/.bashrc
+  echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh"; clear; sleep 2; chmod +x /root/install.sh; /root/install.sh --continue' >> /root/.bashrc
   title "INSTALADOR ADMRufu"
   print_center -ama "La instalacion continuara\ndespues del reinicio!!!"
   msg -bar
@@ -174,7 +174,6 @@ install_start(){
 install_continue(){
   rm /root/install.sh &> /dev/null
   sed -i '/Rufu/d' /root/.bashrc
-  sleep 2
   os_system
   title "INSTALADOR ADMRufu"
   print_center -ama "$distro $vercion"
