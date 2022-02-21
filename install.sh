@@ -19,7 +19,7 @@ SCPinstal="$HOME/install"
 
 rm -rf /etc/localtime &>/dev/null
 ln -s /usr/share/zoneinfo/America/Argentina/Tucuman /etc/localtime &>/dev/null
-rm $(pwd)/$0 &> /dev/null
+#rm $(pwd)/$0 &> /dev/null
 
 stop_install(){
  	title "INSTALACION CANCELADA"
@@ -56,7 +56,7 @@ repo(){
 }
 
 dependencias(){
-	soft="sudo zip unzip ufw curl python python3 python3-pip openssl screen cron iptables lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
+	soft="sudo bsdmainutils zip unzip ufw curl python python3 python3-pip openssl screen cron iptables lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
 
 	for i in $soft; do
 		leng="${#i}"
@@ -172,7 +172,7 @@ install_start(){
 }
 
 install_continue(){
-  rm /root/install.sh &> /dev/null
+  #rm /root/install.sh &> /dev/null
   sed -i '/Rufu/d' /root/.bashrc
   os_system
   title "INSTALADOR ADMRufu"
@@ -227,7 +227,8 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    msg -nama "Descarga de archivos...  "
    for arqx in $(cat $HOME/lista-arq); do
-    wget --no-check-certificate -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && {
+    #wget --no-check-certificate -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && {
+    wget --no-check-certificate -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} && {
     verificar_arq "${arqx}"
    } || {
     msg -verm2 "fallida!!!"
