@@ -12,4 +12,6 @@ rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/ma
 
 1)- fix visualizacion de actualizacion
 
-2)- fix port node ws
+2)- fix opcion reboot
+
+3)- fix port node ws
