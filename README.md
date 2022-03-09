@@ -1,6 +1,6 @@
 # ADMRufu - En desarrollo
 
-# Bot generador de key en telegram = [@ADMRufu_bot](https://t.me/ADMRufu_bot)
+## Bot generador de key en telegram = [@ADMRufu_bot](https://t.me/ADMRufu_bot)
 
 # Instalar ADMRufu
 
