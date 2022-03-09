@@ -1,4 +1,9 @@
 # ADMRufu - En desarrollo
+
+#Bot generador de key en telegram @ADMRufu_bot
+
+https://t.me/ADMRufu_bot
+
 # Instalar ADMRufu
 
 rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --start
