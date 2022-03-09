@@ -1,4 +1,4 @@
-# Script ADMRufu
+# Script ADMRufu :point_right: [instalacion y actualizaciones](https://github.com/rudi9999/ADMRufu/blob/main/README.md)
 ![Selection_005](https://user-images.githubusercontent.com/67137156/157483772-855f6f82-beea-4bff-ba36-c7d156c7efb3.png)
 
 ## menu principal
