@@ -5,6 +5,7 @@
 ![Selection_036](https://user-images.githubusercontent.com/67137156/157489566-ad3dff16-8e19-4216-95d6-15d307aa665f.png)
 
 ## administracion de cuentas ssh
+![Selection_037](https://user-images.githubusercontent.com/67137156/157490396-1e15d862-5619-4ee2-8699-c9bd12b03385.png)
 
 ## administracion de cuentas V2Ray
 
