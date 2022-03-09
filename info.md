@@ -11,6 +11,7 @@
 ![Selection_039](https://user-images.githubusercontent.com/67137156/157491714-b42fe5a0-38be-4e3f-8d5d-0117ef89e04c.png)
 
 ![Selection_040](https://user-images.githubusercontent.com/67137156/157492347-d35ec739-bcd9-4c3d-98cc-70dae9817f38.png)
+![Selection_041](https://user-images.githubusercontent.com/67137156/157492562-e382e01b-4299-40d2-8c35-db6c3c410e4d.png)
 
 ## administracion de cuentas V2Ray
 
