@@ -1,8 +1,8 @@
 # ADMRufu - En desarrollo
 
-## info sobre el script :point_right:[ADMRufu](https://github.com/rudi9999/ADMRufu/blob/main/info.md):point_left:
+## info sobre el script :point_right:[ADMRufu] (https://github.com/rudi9999/ADMRufu/blob/main/info.md)
 
-## Bot generador de key en telegram = [@ADMRufu_bot](https://t.me/ADMRufu_bot)
+## Bot generador de key en telegram :point_right: [@ADMRufu_bot](https://t.me/ADMRufu_bot)
 
 ## Instalar ADMRufu
 
