@@ -14,6 +14,7 @@
 ![Selection_041](https://user-images.githubusercontent.com/67137156/157492562-e382e01b-4299-40d2-8c35-db6c3c410e4d.png)
 
 ## administracion de cuentas V2Ray
+![Selection_042](https://user-images.githubusercontent.com/67137156/157493735-dee1b28b-39ed-4c7b-80cd-b6fe634c41bc.png)
 
 ## configuracion del sistema (activacion de puertos y extras)
 
