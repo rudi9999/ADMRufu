@@ -21,4 +21,5 @@
 
 ## actuaizacion del script (opcion interactiva)
 ![Selection_044](https://user-images.githubusercontent.com/67137156/157494354-3d665fbc-3728-4c4a-b142-6efce6a274e9.png)
+
 si no hay actualizacion, esta opcion no se muestra!
