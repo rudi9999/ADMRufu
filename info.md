@@ -17,5 +17,8 @@
 ![Selection_042](https://user-images.githubusercontent.com/67137156/157493735-dee1b28b-39ed-4c7b-80cd-b6fe634c41bc.png)
 
 ## configuracion del sistema (activacion de puertos y extras)
+![Selection_043](https://user-images.githubusercontent.com/67137156/157494224-50338db7-7cb7-4fe9-9853-dfbe5a23c499.png)
 
 ## actuaizacion del script (opcion interactiva)
+![Selection_044](https://user-images.githubusercontent.com/67137156/157494354-3d665fbc-3728-4c4a-b142-6efce6a274e9.png)
+si no hay actualizacion, esta opcion no se muestra!
