@@ -26,3 +26,7 @@
 2022-03-09
 
 1)- fix bug backup de usuarios
+
+2022-03-11
+
+1)- (fix bug) en inicio de limitador
