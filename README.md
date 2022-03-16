@@ -30,3 +30,11 @@
 2022-03-11
 
 1)- (fix bug) en inicio de limitador
+
+2022-03-15
+
+1)- Se agrego soporte para adminstracion de clinetes modos SSH/HWID/TOKEN
+
+2)- Restaurar copis de usuarios online
+
+3)- limitador de conecciones y expirados por separado
