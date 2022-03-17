@@ -38,3 +38,9 @@
 2)- Restaurar copis de usuarios online
 
 3)- limitador de conecciones y expirados por separado
+
+2022-03-15
+
+1)- fix banner SSH/DROPBEAR
+
+2)- se agrego un menu para edicion de banner SSH/DROPBEAR
