@@ -226,7 +226,7 @@ installDependent(){
         ${PACKAGE_MANAGER} install socat crontabs bash-completion which -y
     else
         fun_bar "${PACKAGE_MANAGER} update" 'APT UPDATE           '
-        fun_bar "${PACKAGE_MANAGER} install socat cron bash-completion ntpdate gawk jq -y" 'INSTALL DEPENDENCIAS '
+        fun_bar "${PACKAGE_MANAGER} install socat cron bash-completion ntpdate gawk jq uuid-runtime -y" 'INSTALL DEPENDENCIAS '
         msg -bar
     fi
 
