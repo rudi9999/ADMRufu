@@ -48,3 +48,10 @@
 2022-03-20
 
 1)- correcion de bug (cerrado de pueto dropbear) al aplicar/editar banner SSH
+
+#REPORTESDE DE BUSG POR:
+
+@ander2314
+@arqimidez
+@Walterlzz
+
