@@ -44,3 +44,7 @@
 1)- fix banner SSH/DROPBEAR
 
 2)- se agrego un menu para edicion de banner SSH/DROPBEAR
+
+2022-03-20
+
+1)- correcion de bug (cerrado de pueto dropbear) al aplicar/editar banner SSH
