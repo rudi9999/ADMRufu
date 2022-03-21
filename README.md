@@ -49,9 +49,15 @@
 
 1)- correcion de bug (cerrado de pueto dropbear) al aplicar/editar banner SSH
 
+2022-03-21
+
+1)- (V2RAY) se bloqueo la lectura de puertos UDP, para mejorar la visualizacion (el bug se esta en estudio.)
+
 #REPORTESDE DE BUSG POR:
 
+@Alexmod80
 @ander2314
 @arqimidez
 @Walterlzz
+@Nelsongabriel32
 
