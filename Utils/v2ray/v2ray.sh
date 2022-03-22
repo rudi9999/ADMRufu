@@ -323,6 +323,7 @@ installFinish() {
         print_center -verd "INSTALACION FINALIZADA"
         print_center -ama "Por favor verifique el log"
         msg -bar
+        msg -ama "►► Presione enter para continuar ◄◄"
         read foo
     fi
 }
