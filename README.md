@@ -53,11 +53,14 @@
 
 1)- (V2RAY) se bloqueo la lectura de puertos UDP, para mejorar la visualizacion (el bug se esta en estudio.)
 
-#REPORTESDE DE BUSG POR:
+#REPORTES DE BUSG POR:
 
 @Alexmod80
-@ander2314
-@arqimidez
-@Walterlzz
-@Nelsongabriel32
 
+@ander2314
+
+@arqimidez
+
+@Walterlzz
+
+@Nelsongabriel32
