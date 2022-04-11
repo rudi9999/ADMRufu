@@ -55,16 +55,28 @@
 
 2022-03-31
 
-1) fix code
+1)- fix code
+
+2022-04-11
+
+1)- add menu manager ssl
+
+2)- fix bug squid
+
+3)- add menu manager squid
 
 #REPORTES DE BUSG POR:
 
-@Alexmod80
+[@Alexmod80](https://t.me/Alexmod80)
 
-@ander2314
+[@ander2314](https://t.me/ander2314)
 
-@arqimidez
+[@arqimidez](https://t.me/arqimidez)
 
-@Walterlzz
+[@Walterlzz](https://t.me/Walterlzz)
 
-@Nelsongabriel32
+[@Walterlzz](https://t.me/Walterlzz)
+
+[@Nelsongabriel32](https://t.me/Nelsongabriel32)
+
+[@titoec593](https://t.me/titoec593)
