@@ -65,6 +65,10 @@
 
 3)- add menu manager squid
 
+2022-04-12
+
+1)- fix code
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
