@@ -69,6 +69,10 @@
 
 1)- fix code
 
+2022-04-13
+
+1)- fix bug limitador de expirados SSH/HWID/TOKEN
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
@@ -84,3 +88,5 @@
 [@Nelsongabriel32](https://t.me/Nelsongabriel32)
 
 [@titoec593](https://t.me/titoec593)
+
+[@Rg4bott](https://t.me/Rg4bott)
