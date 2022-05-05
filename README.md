@@ -73,6 +73,12 @@
 
 1)- fix bug limitador de expirados SSH/HWID/TOKEN
 
+2022-05-05
+
+1)- fix code
+
+2)- se añadio modificacion de Reseller desde el botgen
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
@@ -90,3 +96,5 @@
 [@titoec593](https://t.me/titoec593)
 
 [@Rg4bott](https://t.me/Rg4bott)
+
+[@SonicBoom2021](https://t.me/SonicBoom2021)
