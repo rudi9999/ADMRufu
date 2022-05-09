@@ -89,8 +89,6 @@
 
 [@Walterlzz](https://t.me/Walterlzz)
 
-[@Walterlzz](https://t.me/Walterlzz)
-
 [@Nelsongabriel32](https://t.me/Nelsongabriel32)
 
 [@titoec593](https://t.me/titoec593)
