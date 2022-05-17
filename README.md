@@ -79,6 +79,16 @@
 
 2)- se añadio modificacion de Reseller desde el botgen
 
+2022-05-17
+
+1)- añadido WireGard install
+
+2)- añadido administracion de cuentas wireguard
+
+3)- modificacion de menu principal, (dinamico, acorde al protocolo activo)
+
+4)- fix code
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
