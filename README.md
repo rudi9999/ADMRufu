@@ -89,6 +89,12 @@
 
 4)- fix code
 
+2022-05-19
+
+1)- fix wireguard (para redes NAT)
+
+2)- fix monitor de cuentas SSH
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
