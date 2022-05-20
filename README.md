@@ -95,6 +95,12 @@
 
 2)- fix monitor de cuentas SSH
 
+2022-05-20
+
+1)- fix menu clientes wireguard
+
+2)- fix monitor de cuentas SSH/HWID/TOKEN
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
