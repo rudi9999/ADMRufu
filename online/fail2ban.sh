@@ -197,7 +197,7 @@ clearlog_f(){
 
 fail2_menu(){
 	title "MENU INTALACION Y CONFIGURACION FAIL2BAN"
-	if [[ ! $(dpkg --get-selections|grep -w 'fail2ban'|head -1) ]]; then
+	if [[ $(dpkg --get-selections|grep -w 'fail2ban'|head -1) ]]; then
 		bantime=$(grep 'bantime =' /etc/fail2ban/jail.d/defaults-debian.conf|cut -d ' ' -f3)
 		time=$(msg -azu "tiemp ban: \e[32m$bantime")
 		findtime=$(grep 'findtime =' /etc/fail2ban/jail.d/defaults-debian.conf|cut -d ' ' -f3)
