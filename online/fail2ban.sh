@@ -186,6 +186,12 @@ nano_f(){
 }
 
 log_f(){
+	stoplog(){
+		print_center -verd "saliendo del Log fail2ban!!!"
+		sleep 3
+		return
+	}
+	trap "stoplog" INT TERM
 	tail -n 200 -f /var/log/fail2ban.log | grep "NOTICE"
 }
 
