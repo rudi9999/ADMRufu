@@ -101,6 +101,10 @@
 
 2)- fix monitor de cuentas SSH/HWID/TOKEN
 
+2022-05-26
+
+1)- añadio opcion para ([0] salir del vps). cierra la cesion
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
