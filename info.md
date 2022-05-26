@@ -2,7 +2,7 @@
 ![Selection_005](https://user-images.githubusercontent.com/67137156/157483772-855f6f82-beea-4bff-ba36-c7d156c7efb3.png)
 
 ## menu principal
-![Selection_036](https://user-images.githubusercontent.com/67137156/157489566-ad3dff16-8e19-4216-95d6-15d307aa665f.png)
+![admrufu_home2](https://user-images.githubusercontent.com/67137156/170579752-e92115d1-9c53-457b-93ea-1539a5d36044.png)
 
 ## administracion de cuentas ssh
 ![Selection_037](https://user-images.githubusercontent.com/67137156/157490396-1e15d862-5619-4ee2-8699-c9bd12b03385.png)
@@ -17,7 +17,7 @@
 ![Selection_042](https://user-images.githubusercontent.com/67137156/157493735-dee1b28b-39ed-4c7b-80cd-b6fe634c41bc.png)
 
 ## configuracion del sistema (activacion de puertos y extras)
-![Selection_043](https://user-images.githubusercontent.com/67137156/157494224-50338db7-7cb7-4fe9-9853-dfbe5a23c499.png)
+![admrufu_conf](https://user-images.githubusercontent.com/67137156/170580003-3cc3b607-fe0f-4f3c-bf86-a11b71956def.png)
 
 ## actuaizacion del script (opcion interactiva)
 ![Selection_044](https://user-images.githubusercontent.com/67137156/157494354-3d665fbc-3728-4c4a-b142-6efce6a274e9.png)
