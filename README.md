@@ -4,6 +4,9 @@
 
 ## info sobre el script :point_right: [ADMRufu](https://github.com/rudi9999/ADMRufu/blob/main/info.md)
 
+![admrufu_home2](https://user-images.githubusercontent.com/67137156/170579752-e92115d1-9c53-457b-93ea-1539a5d36044.png)
+
+
 ## Bot generador de key en telegram :point_right: [@ADMRufu_bot](https://t.me/ADMRufu_bot)
 
 ## Instalar ADMRufu
