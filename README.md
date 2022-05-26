@@ -1,6 +1,6 @@
 # ADMRufu - En desarrollo
-![Selection_036](https://user-images.githubusercontent.com/67137156/157495932-721f22b3-aae9-4c70-aac3-45eb187d9e90.png)
-![Selection_043](https://user-images.githubusercontent.com/67137156/157496157-1d244a55-c2fb-4d7d-a950-9693a438e157.png)
+![admrufu_home](https://user-images.githubusercontent.com/67137156/170579136-60bf0dcf-4435-4264-837d-824cffcb3410.png)
+![admrufu_conf](https://user-images.githubusercontent.com/67137156/170579220-775fa3e5-0fc2-4db0-9dd3-07762995200f.png)
 
 ## info sobre el script :point_right: [ADMRufu](https://github.com/rudi9999/ADMRufu/blob/main/info.md)
 
