@@ -1,11 +1,8 @@
 # ADMRufu - En desarrollo
-![admrufu_home](https://user-images.githubusercontent.com/67137156/170579136-60bf0dcf-4435-4264-837d-824cffcb3410.png)
-![admrufu_conf](https://user-images.githubusercontent.com/67137156/170579220-775fa3e5-0fc2-4db0-9dd3-07762995200f.png)
+![admrufu_home2](https://user-images.githubusercontent.com/67137156/170579752-e92115d1-9c53-457b-93ea-1539a5d36044.png)
+![admrufu_conf](https://user-images.githubusercontent.com/67137156/170580003-3cc3b607-fe0f-4f3c-bf86-a11b71956def.png)
 
 ## info sobre el script :point_right: [ADMRufu](https://github.com/rudi9999/ADMRufu/blob/main/info.md)
-
-![admrufu_home2](https://user-images.githubusercontent.com/67137156/170579752-e92115d1-9c53-457b-93ea-1539a5d36044.png)
-
 
 ## Bot generador de key en telegram :point_right: [@ADMRufu_bot](https://t.me/ADMRufu_bot)
 
