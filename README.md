@@ -14,8 +14,6 @@
 
 `rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --update`
 
-## historial de :point_right: [ACTUALIZACIONES](https://github.com/rudi9999/ADMRufu/blob/main/history.md)
-
 ## ACTUALIZACION
 
 2022-06-08
@@ -23,6 +21,8 @@
 1)- agrego opcion de fix 'inciar con el sistema' DROPBEAR/SSL
 
 2)- fix opcion para ([0] salir del vps). cierra la cesion
+
+## Historial de :point_right: [ACTUALIZACIONES](https://github.com/rudi9999/ADMRufu/blob/main/history.md)
 
 #REPORTES DE BUSG POR:
 
