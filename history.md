@@ -1,3 +1,5 @@
+# Script ADMRufu :point_right: [instalacion y actualizaciones](https://github.com/rudi9999/ADMRufu/blob/main/README.md)
+
 ## Updates
 2022-03-08
 
@@ -102,3 +104,5 @@
 1)- agrego opcion de fix 'inciar con el sistema' DROPBEAR/SSL
 
 2)- fix opcion para ([0] salir del vps). cierra la cesion
+
+# Script ADMRufu :point_right: [instalacion y actualizaciones](https://github.com/rudi9999/ADMRufu/blob/main/README.md)
