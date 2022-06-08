@@ -105,9 +105,19 @@
 
 1)- añadio opcion para ([0] salir del vps). cierra la cesion
 
+2022-06-01
+
+1)- agrego explorador de archivos web (filebrowser)
+
+2)- rescrivio code openvpn
+
+3)- agrego opcion editar apariencia menu de protocolos
+
 2022-06-08
 
 1)- agrego opcion de fix 'inciar con el sistema' DROPBEAR/SSL
+
+2)- fix opcion para ([0] salir del vps). cierra la cesion
 
 #REPORTES DE BUSG POR:
 
