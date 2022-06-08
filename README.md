@@ -136,3 +136,5 @@
 [@Rg4bott](https://t.me/Rg4bott)
 
 [@SonicBoom2021](https://t.me/SonicBoom2021)
+
+[@CrakenYT](https://t.me/CrakenYT)
