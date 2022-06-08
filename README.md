@@ -105,6 +105,10 @@
 
 1)- añadio opcion para ([0] salir del vps). cierra la cesion
 
+2022-06-08
+
+1)- agrego opcion de fix 'inciar con el sistema' DROPBEAR/SSL
+
 #REPORTES DE BUSG POR:
 
 [@Alexmod80](https://t.me/Alexmod80)
