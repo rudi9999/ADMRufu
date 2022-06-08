@@ -14,6 +14,8 @@
 
 `rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --update`
 
+## historial de :point_right: [ACTUALIZACIONES](https://github.com/rudi9999/ADMRufu/blob/main/history.md)
+
 ## Updates
 2022-03-08
 
