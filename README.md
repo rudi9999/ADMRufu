@@ -16,11 +16,13 @@
 
 ## ACTUALIZACION
 
-2022-06-08
+2022-07-01
 
-1)- agrego opcion de fix 'inciar con el sistema' DROPBEAR/SSL
+1)- generar sub-dominios activa
 
-2)- fix opcion para ([0] salir del vps). cierra la cesion
+2)- script generar dominios, nuevo codigo
+
+3)- agrego genera domnio tipo A y NS en paralelo
 
 ## Historial de :point_right: [ACTUALIZACIONES](https://github.com/rudi9999/ADMRufu/blob/main/history.md)
 
