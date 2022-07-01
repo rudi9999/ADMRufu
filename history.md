@@ -105,4 +105,12 @@
 
 2)- fix opcion para ([0] salir del vps). cierra la cesion
 
+2022-07-01
+
+1)- generar sub-dominios activa
+
+2)- script generar dominios, nuevo codigo
+
+3)- agrego genera domnio tipo A y NS en paralelo
+
 # Script ADMRufu :point_right: [instalacion y actualizaciones](https://github.com/rudi9999/ADMRufu/blob/main/README.md)
