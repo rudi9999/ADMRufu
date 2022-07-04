@@ -113,4 +113,8 @@
 
 3)- agrego genera domnio tipo A y NS en paralelo
 
+2022-07-04
+
+1)- fix code 
+
 # Script ADMRufu :point_right: [instalacion y actualizaciones](https://github.com/rudi9999/ADMRufu/blob/main/README.md)
