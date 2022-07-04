@@ -24,6 +24,10 @@
 
 3)- agrego genera domnio tipo A y NS en paralelo
 
+2022-07-04
+
+1)- fix code 
+
 ## Historial de :point_right: [ACTUALIZACIONES](https://github.com/rudi9999/ADMRufu/blob/main/history.md)
 
 #REPORTES DE BUSG POR:
