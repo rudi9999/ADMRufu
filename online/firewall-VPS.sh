@@ -225,9 +225,9 @@ Ban_BT(){
 	msg -bar
 	View_KEY_WORDS
 	msg -bar
-	print_center -verd "Torrent bloqueados y Palabras Claves !"
+	print_center -verd "Torrent bloqueados y Palabras Claves!"
 	enter
-	return 1
+	return
 }
 Ban_SPAM(){
 	check_SPAM
@@ -239,7 +239,7 @@ Ban_SPAM(){
 	msg -bar
 	print_center -verd "Puertos SPAM Bloqueados !"
 	enter
-	return 1
+	return
 }
 UnBan_BT(){
 	check_BT
@@ -249,9 +249,9 @@ UnBan_BT(){
 	msg -bar
 	View_KEY_WORDS
 	msg -bar
-	print_center -verd "Torrent Desbloqueados y Palabras Claves !"
+	print_center -verd "Torrent Desbloqueados y Palabras Claves!"
 	enter
-	return 1
+	return
 }
 UnBan_SPAM(){
 	check_SPAM
@@ -263,7 +263,7 @@ UnBan_SPAM(){
 	msg -bar
 	print_center -verd "Puertos de SPAM Desbloqueados !"
 	enter
-	return 1
+	return
 }
 
 ENTER_Ban_KEY_WORDS_type(){
@@ -285,11 +285,14 @@ ENTER_Ban_KEY_WORDS_type(){
 	msg -ama "Archivo local: --file /direcion/del/archivo.txt"
 	msg -ama "Archivo online: --url http://direcion.del:archivo.txt"
 	msg -bar3
-	echo -e " $(msg -verm3 "╭╼╼╼╼╼╼╼╼╼╼[")$(msg -azu "ingresa Palabra/url/archivo")$(msg -verm3 "]")"
-	echo -ne " $(msg -verm3 "╰╼")\033[37;1m> "
-	read option
+	#echo -e " $(msg -verm3 "╭╼╼╼╼╼╼╼╼╼╼[")$(msg -azu "ingresa Palabra/url/archivo")$(msg -verm3 "]")"
+	#echo -ne " $(msg -verm3 "╰╼")\033[37;1m> "
+	#read option
 
-	[[ -z ${option} ]] && return
+	in_opcion_down 'ingresa Palabra/url/archivo'
+	option=$opcion
+
+	[[ -z $option ]] && return 1
 
 	opt=$(echo "$option"|awk -F ' ' '{print $1}')
 
@@ -347,72 +350,69 @@ ENTER_Ban_PORT(){
 	fi
 	
 	PORT=$(in_opcion "Intro se cancela por defecto")
-	[[ -z "${PORT}" ]] && return
+	[[ -z "${PORT}" ]] && return 1
+
+	if [[ $(echo "${PORT:0:1}"|grep '0\|[A-Za-z]\|,\|:\|\$\|#\|\[\|\]\|/\|?\|@\|!\|&\|(\|)\|*\|+\|;\|=\|%\|"') ]]; then
+		del 1
+		print_center -verm2 'formato invalido!'
+		sleep 2
+		return 1
+	elif [[ $(echo "${PORT}"|grep '[A-Za-z]\|\$\|#\|\[\|\]\|/\|?\|@\|!\|&\|(\|)\|*\|+\|;\|=\|%\|"') ]]; then
+		del 1
+		print_center -verm2 'formato invalido!'
+		sleep 2
+		return 1
+	fi
 
 	if [[ $(echo "${port_list}"|grep -w "$PORT") ]]; then
 		s="D"
 		delP="$PORT"
 		delR=$(echo "${port_list}"|grep -w "$delP")
 
-		if [[ $(echo "$delR"|grep ":") ]]; then
-			sed -i "/$delR/d" ${firewall_port}
+
+		if [[ $(echo "$delR"|grep ':') ]]; then
+			sed -i "/:$delP/d" ${firewall_port}
+			sed -i "/$delP:/d" ${firewall_port}
 			PORT="$delR"
-		else
+		elif [[ $(echo "$delR"|grep ',') ]]; then
+			sed -i "s/,$delP//g" ${firewall_port}
+			sed -i "s/$delP,//g" ${firewall_port}
+
 			PORT="$delR"
 			[[ "${op_2[1]}" = '1' ]] && Set_PORT
-			echo "$(cat ${firewall_port}|grep -w -v "$delP")" > ${firewall_port}
 
+			PORT=$(echo "$delR"|sed "/,$delP/d"|sed "/$delP,/d")
 			s="A"
-
-			NEWPORT=($(echo "$delR"|sed 's/,/ /g'))
-			lenght=${#NEWPORT[@]}
-			unset PORT
-			n=1
-			for i in ${NEWPORT[@]}; do
-				[[ "$i" -eq "$delP" ]] && let n++ && continue
-				PORT+="$i"
-				[[ "$n" -lt "$lenght" ]] && PORT+=","
-				let n++
-			done
-			[[ "$lenght" -gt '1' ]] && echo "$PORT" >> ${firewall_port}
+		else
+			sed -i "/$delP/d" ${firewall_port}
+			PORT="$delR"
 		fi
 	else
 		s="A"
+		sed -i '/^$/d' ${firewall_port}
 		echo "$PORT" >> ${firewall_port}
 	fi
-}
-
-Ban_PORT_1(){
-	s="A"
-	ENTER_Ban_PORT
-	[[ "${op_2[1]}" = '1' ]] && Set_PORT
-	[[ -z "${PORT}" ]] && return 1
-	while true; do
-		ENTER_Ban_PORT
-		[[ -z "${PORT}" ]] && break
-		[[ "${op_2[1]}" = '1' ]] && Set_PORT
-	done
-	return 1
+	return 0
 }
 
 Ban_PORT(){
 	s="A"
-	ENTER_Ban_PORT
-	[[ -z "${PORT}" ]] && return 1
-	[[ "${op_2[1]}" = '1' ]] && Set_PORT
-	return 1
+	while true; do
+		ENTER_Ban_PORT
+		[[ $? -eq 1 ]] && break
+		[[ "${op_2[1]}" = '1' ]] && [[ -z $PORT ]] && Set_PORT
+	done
 }
 
 Ban_KEY_WORDS(){
 	s="A"
-	ENTER_Ban_KEY_WORDS_type
-	[[ "${op_1[1]}" = '1' ]] && Set_KEY_WORDS
-	[[ -z ${option} ]] && return
 	while true; do
 		ENTER_Ban_KEY_WORDS_type
+		[[ $? -eq 1 ]] && break
 		[[ "${op_1[1]}" = '1' ]] && Set_KEY_WORDS
 	done
 }
+
 check_iptables(){
 	v4iptables=`iptables -V`
 	v6iptables=`ip6tables -V`
@@ -455,13 +455,6 @@ menu_fw(){
  	esac
 }
 
-while [[  $? -eq 0 ]]; do
+while [[ $? -eq 0 ]]; do
 	menu_fw
 done
-
-#while [[ ${retorno} != @(0) ]]; do
-#  menu_fw
- # retorno="$?"
-  #[[ ${retorno} != @(0|[1]) ]] && enter
-#done
-
