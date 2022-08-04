@@ -1,12 +1,12 @@
 ## Ubuntu 21.10
 
-deb http://us.archive.ubuntu.com/ubuntu/ impish main restricted
-deb http://us.archive.ubuntu.com/ubuntu/ impish-updates main restricted
-deb http://us.archive.ubuntu.com/ubuntu/ impish universe
-deb http://us.archive.ubuntu.com/ubuntu/ impish-updates universe
-deb http://us.archive.ubuntu.com/ubuntu/ impish multiverse
-deb http://us.archive.ubuntu.com/ubuntu/ impish-updates multiverse
-deb http://us.archive.ubuntu.com/ubuntu/ impish-backports main restricted universe multiverse
-deb http://security.ubuntu.com/ubuntu impish-security main restricted
-deb http://security.ubuntu.com/ubuntu impish-security universe
-deb http://security.ubuntu.com/ubuntu impish-security multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ jammy main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ jammy-updates main restricted
+deb http://us.archive.ubuntu.com/ubuntu/ jammy universe
+deb http://us.archive.ubuntu.com/ubuntu/ jammy-updates universe
+deb http://us.archive.ubuntu.com/ubuntu/ jammy multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ jammy-updates multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu jammy-security main restricted
+deb http://security.ubuntu.com/ubuntu jammy-security universe
+deb http://security.ubuntu.com/ubuntu jammy-security multiverse
