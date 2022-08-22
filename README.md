@@ -15,6 +15,15 @@
 `rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --update`
 
 ## ACTUALIZACION
+2022-08-22
+
+1)- fix code
+
+2)- se agrego CHEKUSER para apps que verificar el tiempo restante del usuario
+
+2022-07-04
+
+1)- fix code 
 
 2022-07-01
 
@@ -23,10 +32,6 @@
 2)- script generar dominios, nuevo codigo
 
 3)- agrego genera domnio tipo A y NS en paralelo
-
-2022-07-04
-
-1)- fix code 
 
 ## Historial de :point_right: [ACTUALIZACIONES](https://github.com/rudi9999/ADMRufu/blob/main/history.md)
 
