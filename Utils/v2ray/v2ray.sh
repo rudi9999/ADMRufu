@@ -51,6 +51,7 @@ dependencias(){
 			fi
 		fi
 	done
+	msg -bar
 }
 
 closeSELinux(){
@@ -61,7 +62,7 @@ closeSELinux(){
 }
 
 timeSync(){
-	echo -e " Time Synchronizing... "
+	print_center -blu "Sincronización de tiempo ..."
 	if [[ `command -v ntpdate` ]];then
 		ntpdate pool.ntp.org
 	elif [[ `command -v chronyc` ]];then
@@ -69,9 +70,10 @@ timeSync(){
 	fi
 
 	if [[ $? -eq 0 ]];then 
-		echo -e " Time Sync Success"
-		echo -e " now: `date -R`"
+		print_center -blu "Éxito de sincronización de tiempo"
+		print_center -ama "Actual : `date -R`"
 	fi
+	msg -bar
 }
 
 updateProject(){
@@ -136,7 +138,6 @@ main(){
 	title 'INSTALADO DEPENDENCIAS V2RAY'
 
     dependencias
-    msg -bar
     closeSELinux
     timeSync
     updateProject
