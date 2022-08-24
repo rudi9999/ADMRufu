@@ -51,6 +51,15 @@ dependencias(){
 			fi
 		fi
 	done
+
+	if [[ ! -e '/usr/bin/pip' ]]; then
+		_pip=$(type -p pip)
+		ln -s "$_pip" /usr/bin/pip
+	fi
+	if [[ ! -e '/usr/bin/pip3' ]]; then
+		_pip3=$(type -p pip3)
+		ln -s "$_pip3" /usr/bin/pip3
+	fi
 	msg -bar
 }
 
