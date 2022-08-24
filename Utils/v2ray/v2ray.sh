@@ -117,7 +117,7 @@ installFinish(){
     rm -rf /etc/v2ray/config.json
     jq '.inbounds[].streamSettings += {"network":"ws","wsSettings":{"path": "/ADMRufu/","headers": {"Host": "ejemplo.com"}}}' < /etc/v2ray/tmp.json >> /etc/v2ray/config.json
     chmod 777 /etc/v2ray/config.json
-
+    msg -bar
     if [[ $(v2ray restart|grep success) ]]; then
     	v2ray info
     	msg -bar
@@ -136,6 +136,7 @@ main(){
 	title 'INSTALADO DEPENDENCIAS V2RAY'
 
     dependencias
+    msg -bar
     closeSELinux
     timeSync
     updateProject
