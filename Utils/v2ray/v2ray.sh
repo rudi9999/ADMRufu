@@ -105,7 +105,7 @@ updateProject(){
 profileInit(){
     [[ $(grep v2ray ~/$ENV_FILE) ]] && sed -i '/v2ray/d' ~/$ENV_FILE && source ~/$ENV_FILE
     [[ -z $(grep PYTHONIOENCODING=utf-8 ~/$ENV_FILE) ]] && echo "export PYTHONIOENCODING=utf-8" >> ~/$ENV_FILE && source ~/$ENV_FILE
-    v2ray new
+    v2ray new &>/dev/null
 }
 
 installFinish(){
