@@ -2,6 +2,14 @@
 
 ## Updates
 
+2022-08-24
+
+1)- estilo instalado v2ray renovado
+
+2)- mejorar en la instaalcion
+
+3)- fix code v2ray
+
 2022-08-22
 
 1)- fix code
