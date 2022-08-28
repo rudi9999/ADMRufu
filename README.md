@@ -17,6 +17,16 @@
 ## ACTUALIZACION
 2022-08-24
 
+1)- slowdns ahora de ejecuta via servicios systemctl
+
+2)- fix slowdns
+
+3)- squid reconstruid
+
+4)- fix, ubuntu 20,21,22
+
+2022-08-24
+
 1)- estilo instalado v2ray renovado
 
 2)- mejorar en la instaalcion
