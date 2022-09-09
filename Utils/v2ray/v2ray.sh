@@ -111,7 +111,7 @@ updateProject(){
         source /usr/share/bash-completion/completions/xray
     fi
     # bash <(curl -L -s https://multi.netlify.app/go.sh)
-    bash <(curl -L -s https://raw.githubusercontent.com/rudi9999/ADMRufu/main/Utils/v2ray/go.sh --version v4.45.2)
+    bash <(curl -L -s https://raw.githubusercontent.com/rudi9999/ADMRufu/main/Utils/v2ray/go.sh) --version v4.45.2
 }
 
 profileInit(){
