@@ -28,6 +28,7 @@ dependencias(){
 			msg -verm2 "FAIL"
 			sleep 2
 			del 1
+			
 			if [[ $install = "python" ]]; then
 				pts=$(echo ${pts:1})
 				msg -nazu "      instalando python2 $(msg -ama "$pts")"
