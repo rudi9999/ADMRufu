@@ -15,6 +15,10 @@
 `rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --update`
 
 ## ACTUALIZACION
+2022-09-18
+
+1)- fix checkuser
+
 2022-09-09
 
 1)- fix v2ray (instala v4.45.2 en lugar de v5.1.0)
