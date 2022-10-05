@@ -12,7 +12,7 @@ CLEAN_IPTABLES_SHELL="$BASE_SOURCE_PATH/v2ray_util/global_setting/clean_iptables
 [[ -z $(echo $SHELL|grep zsh) ]] && ENV_FILE=".bashrc" || ENV_FILE=".zshrc"
 
 dependencias(){
-	soft="socat cron bash-completion ntpdate gawk jq uuid-runtime python3 python3-pip"
+	soft="socat cron bash-completion ntpdate gawk jq uuid-runtime python-pip python3 python3-pip"
 
 	for install in $soft; do
 		leng="${#install}"
@@ -91,7 +91,7 @@ updateProject(){
 		enter
 		return 1
 	fi
-    pip install -U v2ray_util
+    pip3 install -U v2ray_util
     if [[ -e $UTIL_PATH ]];then
         [[ -z $(cat $UTIL_PATH|grep lang) ]] && echo "lang=en" >> $UTIL_PATH
     else
