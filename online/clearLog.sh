@@ -73,6 +73,7 @@ if [[ $opc = '--clearlog' ]]; then
 	clearlog
 	exit
 fi
+
 while [[ $? -eq 0 ]]; do
 	menuClearLog
 done
