@@ -90,3 +90,5 @@
 [@CrakenYT](https://t.me/CrakenYT)
 
 [@WillyAbel](https://t.me/WillyAbel)
+
+[@JuanCdiaz99](https://t.me/JuanCdiaz99)
