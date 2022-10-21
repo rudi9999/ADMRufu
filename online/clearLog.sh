@@ -13,7 +13,7 @@ clearlog(){
 	for i in $files; do
 		> /var/log/$i
 	done
-	
+
 	echo "$(printf '%(%H:%M:%S)T')" > /root/clearlog.txt
 }
 
@@ -33,7 +33,7 @@ autoClearLog(){
 					return;;
 		      n|N)  return;;
 		      	*)  print_center -ama 'Selecciona S para si, N para no'
-					sleep 1,5
+					sleep 2
 					del 1
 		    esac
 	    done
@@ -75,7 +75,6 @@ if [[ $opc = '--clearlog' ]]; then
 	clearlog
 	exit
 fi
-
 while [[ $? -eq 0 ]]; do
 	menuClearLog
 done
