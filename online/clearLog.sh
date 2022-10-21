@@ -13,6 +13,8 @@ clearlog(){
 	for i in $files; do
 		> /var/log/$i
 	done
+	
+	echo "$(printf '%(%H:%M:%S)T')" > /root/clearlog.txt
 }
 
 autoClearLog(){
@@ -60,7 +62,7 @@ menuClearLog(){
 	case $opcion in
 		1)  print_center -ama 'limpiando logs'
 			clearlog
-			sleep 1,5
+			sleep 2
 			del 1
 			print_center -verd 'limpiesa de logs completa'
 			enter;;
