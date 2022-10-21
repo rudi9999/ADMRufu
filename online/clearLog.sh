@@ -9,7 +9,7 @@ clearlog(){
 	for backs in $filesBack; do
 		rm -rf /var/log/$backs.*
 	done
-	files=$(ls -lh /var/log/|grep adm|grep 'M'|awk '{print $9}')
+	files=$(ls -lh /var/log/|grep adm|grep "M\|G"|awk '{print $9}')
 	for i in $files; do
 		> /var/log/$i
 	done
