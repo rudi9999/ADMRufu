@@ -15,6 +15,14 @@
 `rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --update`
 
 ## ACTUALIZACION
+2022-10-10
+
+1)- generador de sub-dominios actualizado (online, y mas seguro)
+
+3)- fix en opcion de actulizacion (muestra detalles de la actulizacion)
+
+2)- fix instalador del script
+
 2022-09-18
 
 1)- fix checkuser
