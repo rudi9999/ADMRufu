@@ -70,10 +70,9 @@ menuClearLog(){
 }
 
 if [[ $opc = '--clearlog' ]]; then
-	echo 'hola'
-else
-	unset ?
-	while [[ $? -eq 0 ]]; do
-		menuClearLog
-	done
+	clearlog
+	exit
 fi
+while [[ $? -eq 0 ]]; do
+	menuClearLog
+done
