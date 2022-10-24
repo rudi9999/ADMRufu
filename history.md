@@ -1,6 +1,15 @@
 # Script ADMRufu :point_right: [instalacion y actualizaciones](https://github.com/rudi9999/ADMRufu/blob/main/README.md)
 
 ## Updates
+2022-10-24
+
+1)- fix code (limitador)
+
+2)- fix code (visualizacion user ssh)
+
+3)- admin de puertos activos movido a herramientas online
+    
+4)- nueva funcion administracion dns
 
 2022-10-10
 
