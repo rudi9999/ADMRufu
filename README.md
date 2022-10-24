@@ -15,6 +15,16 @@
 `rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --update`
 
 ## ACTUALIZACION
+2022-10-24
+
+1)- fix code (limitador)
+
+2)- fix code (visualizacion user ssh)
+
+3)- admin de puertos activos movido a herramientas online
+    
+4)- nueva funcion administracion dns
+
 2022-10-10
 
 1)- generador de sub-dominios actualizado (online, y mas seguro)
