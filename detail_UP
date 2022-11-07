@@ -1,11 +1,16 @@
- 1)- fix code (limitador)
-
- 2)- fix code (visualizacion user ssh)
-
- 3)- admin de puertos activos movido
-     a herramientas online
-    
- 4)- nueva funcion administracion dns
+ Actulizacion 2022-11-07
+ 
+ 1)- fix code
+ 
+ 2)- fix checkUser y userOnline.
+     se quito el uso / al final del url.
+     ejecucion via systemctl.
+     no requiere de nginx.
+     soporte en url directorio /checkUser
+     requiere php5 en adelente.
+     NOTA: si estas usando un vercion anterior
+     de checkUser requiere decinstalacion antes
+     de actulizar este script.
 
  NOTA:
    - De tratarse de una funcion que no usas
