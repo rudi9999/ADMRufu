@@ -269,6 +269,7 @@ edit_openssh(){
     if [[ ! -z "$(echo "$varline"|grep 'ADMRufu')" ]]; then
       for i in `echo $PORT`; do
         echo -e "Port ${i}" >> ${CONF}
+        ufw allow $i/tcp > /dev/null 2>&1
       done
       continue
     fi
