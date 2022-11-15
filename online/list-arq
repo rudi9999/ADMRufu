@@ -4,4 +4,4 @@ FAIL2BAN \e[32m[working] = fail2ban.sh
 FIREWALL VPS \e[32m[working] = firewall-VPS.sh
 ADMIN PORTS ACTIVOS \e[32m[working] = ports.sh
 CLEAR LOGS \e[31m[beta] = clearLog.sh
-FIX SSL \e[31m[beta] = ssl.sh
+CONF ZONA HORARIA \e[32m[working] = timeZone.sh
