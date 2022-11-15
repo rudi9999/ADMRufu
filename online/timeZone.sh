@@ -17,8 +17,7 @@ done <<< "$timezones"
 back
 zones=$(selection_fun $i)
 if [[ $zones -gt 0 ]]; then
-	#timedatectl set-timezone ${zone["$zones"]}
-	#timedatectl|grep 'Time zone'
+	timedatectl set-timezone ${zone["$zones"]}
 	title -verd 'ZONA HORARIA MODIFICADA'
 	newzone=$(timedatectl|grep 'Time zone')
 	print_center -ama "$(timedatectl|grep 'Time zone')"
