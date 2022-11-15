@@ -1,7 +1,5 @@
 #!/bin/bash
-
-source ../../module
-
+#source ../../module
 title 'CONFIGURACION DE ZONA HORARIA'
 timezones=$(timedatectl list-timezones|grep America)
 i=0
