@@ -20,6 +20,8 @@
 
 1)- corregido falla al eliminar host dns
 
+2)- se agrego renovacion de usuario v2ray
+
 2022-10-24
 
 1)- fix code (limitador)
