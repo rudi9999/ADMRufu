@@ -15,6 +15,11 @@
 `rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --update`
 
 ## ACTUALIZACION
+
+2022-11-24
+
+1)- corregido falla al eliminar host dns
+
 2022-10-24
 
 1)- fix code (limitador)
@@ -102,3 +107,5 @@
 [@WillyAbel](https://t.me/WillyAbel)
 
 [@JuanCdiaz99](https://t.me/JuanCdiaz99)
+
+[@Trigger_Fulanito](https://t.me/Trigger_Fulanito)
