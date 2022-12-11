@@ -1,22 +1,9 @@
- Actulizacion 2022-11-24
+ Actulizacion 2022-12-11
 
-1)- corregido falla al eliminar host dns
-
-2)- se agrego renovacion de usuario v2ray
- 
- Actulizacion 2022-11-07
- 
- 1)- fix code
- 
- 2)- fix checkUser y userOnline.
-     se quito el uso / al final del url.
-     ejecucion via systemctl.
-     no requiere de nginx.
-     soporte en url directorio /checkUser
-     requiere php5 en adelente.
-     NOTA: si estas usando una vercion anterior
-     de checkUser requiere decinstalar antes
-     de actulizar este script.
+1)- Nuevo udpserver script
+    script by @Rufu99
+    binario udpServer by team newtoolsworks
+    UDPcliente by SocksIP
 
  NOTA:
    - De tratarse de una funcion que no usas
