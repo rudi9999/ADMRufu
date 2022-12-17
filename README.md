@@ -16,6 +16,10 @@
 
 ## ACTUALIZACION
 
+2022-12-17
+ 
+1)- add exclucion de puertos udp en udpServer
+
 2022-11-24
 
 1)- corregido falla al eliminar host dns
