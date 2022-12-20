@@ -16,6 +16,12 @@
 
 ## ACTUALIZACION
 
+2022-12-19
+
+1)- fix code all script ssl
+
+2)- se inabilito script bbr
+
 2022-12-17
  
 1)- add exclucion de puertos udp en udpServer
