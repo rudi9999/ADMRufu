@@ -16,6 +16,10 @@
 
 ## ACTUALIZACION
 
+2022-12-24
+
+1)- Nuevo script tcpbbr, nucles mas actuales, instalacion mas segura
+
 2022-12-19
 
 1)- fix code all script ssl
