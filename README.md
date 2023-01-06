@@ -20,6 +20,8 @@
 
 1)- fix user SSH/TOKEN/HWID, visualizacion en orde alfabetico
 
+2)- fix bugs renovar usuarios unlock.
+
 2022-12-24
 
 1)- Nuevo script tcpbbr, nucles mas actuales, instalacion mas segura
