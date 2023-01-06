@@ -16,6 +16,10 @@
 
 ## ACTUALIZACION
 
+2023-01-06
+
+1)- fix user SSH/TOKEN/HWID, visualizacion en orde alfabetico
+
 2022-12-24
 
 1)- Nuevo script tcpbbr, nucles mas actuales, instalacion mas segura
