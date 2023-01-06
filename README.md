@@ -133,3 +133,7 @@
 [@Trigger_Fulanito](https://t.me/Trigger_Fulanito)
 
 [@Near365](https://t.me/Near365)
+
+[@JManu287](https://t.me/JManu287)
+
+[@Stain89mx](https://t.me/Stain89mx)
