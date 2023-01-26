@@ -284,8 +284,13 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    del 1
 
    export ID=$(ofus $Key|awk -F '/' '{print $2}'|cut -d '_' -f2)
+   
+   echo $ID
+   echo $PRETTY_NAME
 
    ADMRufu -i $ID
+   echo 
+   read
 
    print_center -verd 'Instalacion completa'
    sleep 2s
