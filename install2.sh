@@ -220,8 +220,7 @@ install_continue(){
   enter
 }
 
-source /etc/os-release
-export PRETTY_NAME
+source /etc/os-release; export PRETTY_NAME
 
 while :
 do
@@ -256,7 +255,6 @@ wget -O $HOME/lista-arq $(ofus "$Key")/$IP > /dev/null 2>&1 && msg -verd "Key Co
    [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq
    exit
    }
-export Key
 msg -bar3
 
 IP=$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && echo "$IP" > /usr/bin/vendor_code
@@ -283,14 +281,12 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    done
    del 1
 
-   export ID=$(ofus $Key|awk -F '/' '{print $2}'|cut -d '_' -f2)
-   
-   echo $ID
-   echo $PRETTY_NAME
+   data=$(ofus $Key|awk -F '/' '{print $2}')
 
-   ADMRufu -i $ID
-   echo 
-   read
+   export IDTG=$(echo $data|cut -d '_' -f2)
+   export IDKEY=$(echo $data|cut -d '_' -f1)
+
+   ADMRufu -i &>/dev/null
 
    print_center -verd 'Instalacion completa'
    sleep 2s
@@ -298,7 +294,6 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
    rm -rf /usr/bin/menu
    rm -rf /usr/bin/adm
-   #rm -rf /usr/bin/ADMRufu
    ln -s /usr/bin/ADMRufu /usr/bin/menu
    ln -s /usr/bin/ADMRufu /usr/bin/adm
    sed -i '/Rufu/d' /etc/bash.bashrc
