@@ -8,7 +8,7 @@
 
 ## Instalar ADMRufu
 
-`rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod +x install.sh* && ./install.sh* --start`
+`rm -rf install.sh* && wget https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh && chmod 775 install.sh* && ./install.sh* --start`
 
 ## Actualizar ADMRufu
 
