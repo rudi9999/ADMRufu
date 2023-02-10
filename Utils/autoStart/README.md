@@ -1,5 +1,5 @@
 # AutoStart by @Rufu99
 
-![Selección_039](https://user-images.githubusercontent.com/67137156/218184224-971413b7-2d01-47a2-a3b8-1d17d2aeae6b.png)
+![Selección_040](https://user-images.githubusercontent.com/67137156/218185158-294f5a56-926b-4a5e-b776-3fcdd794abff.png)
 
 requiere del script ADMRufu oficial.
