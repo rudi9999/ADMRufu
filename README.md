@@ -16,6 +16,10 @@
 
 ## ACTUALIZACION
 
+2023-03-31
+ 
+1)- fix user SSH/TOKEN/HWID, correcion al renovar no da datos.
+
 2023-01-06
 
 1)- fix user SSH/TOKEN/HWID, visualizacion en orde alfabetico
