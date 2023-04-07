@@ -16,6 +16,10 @@
 
 ## ACTUALIZACION
 
+ 2023-04-07
+ 
+1)- UDPserver, opcion de seleccion de ip deteccion de ip nat y publica
+
 2023-03-31
  
 1)- fix user SSH/TOKEN/HWID, correcion al renovar no da datos.
