@@ -1,0 +1,9 @@
+{
+  "stream_buffer": 33554432,
+  "receive_buffer": 83886080,
+  "user": "epro",
+  "auth": {
+    "mode": "passwords",
+    "pass": ["dev", "team"]
+  }
+}
