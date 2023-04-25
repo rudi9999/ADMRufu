@@ -16,6 +16,10 @@
 
 ## ACTUALIZACION
 
+ 2023-04-25
+ 
+1)- Protocolo udp-custom agregado, apps (HTTPCustom)
+
  2023-04-07
  
 1)- UDPserver, opcion de seleccion de ip deteccion de ip nat y publica
