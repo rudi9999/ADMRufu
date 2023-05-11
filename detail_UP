@@ -1,19 +1,16 @@
+ Actulizacion 2023-05-10
+3)- psiphon-manager agregado
+    protocolo psiphon agregado
+    
  Actulizacion 2023-04-25
-1)- UDP-CUSTOM agregado
+2)- UDP-CUSTOM agregado
     protocolo udp-custom agregado
     apps (HTTPCustom)
- 
+    
  Actulizacion 2023-04-07
  
 1)- UDPserver, opcion de seleccion de ip
     deteccion de ip nat y publica
- 
- 
- Actulizacion 2023-03-31
- 
-1)- fix user SSH/TOKEN/HWID
-    correcion al renovar no
-    da datos.
 
  NOTA:
    - De tratarse de una funcion que no usas
