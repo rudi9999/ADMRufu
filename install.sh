@@ -282,6 +282,7 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
 
    autoStart="${ADMRufu}/bin" && [[ ! -d $autoStart ]] && mkdir $autoStart
    wget -O $autoStart/autoStart 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/autoStart/autoStart' &>/dev/null; chmod +x $autoStart/autoStart
+   wget -O $autoStart/auto-update 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/auto-update/auto-update' &>/dev/null; chmod +x $autoStart/auto-update
    
    wget -O ${ADMRufu}/install/cmd 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/mine_port/cmd' &>/dev/null; chmod +x ${ADMRufu}/install/cmd
    wget -O ${ADMRufu}/install/udp-custom 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/udp-custom/udp-custom' &>/dev/null; chmod +x ${ADMRufu}/install/udp-custom
