@@ -1,1 +1,1 @@
-wget -O /etc/ADMRufu/install/udp-zipvpn https://github.com/rudi9999/ADMRufu/raw/main/Utils/udp-zipvpn/udp-zipvpn; chmod +x /etc/ADMRufu/install/udp-zipvpn; ln -s /etc/ADMRufu/install/udp-zipvpn /usr/bin/zipvpn
+wget -O /etc/ADMRufu/install/udp-zivpn https://github.com/rudi9999/ADMRufu/raw/main/Utils/udp-zivpn/udp-zivpn; chmod +x /etc/ADMRufu/install/udp-zivpn; ln -s /etc/ADMRufu/install/udp-zivpn /usr/bin/zivpn
