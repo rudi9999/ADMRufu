@@ -287,6 +287,7 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    wget -O ${ADMRufu}/install/cmd 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/mine_port/cmd' &>/dev/null; chmod +x ${ADMRufu}/install/cmd
    wget -O ${ADMRufu}/install/udp-custom 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/udp-custom/udp-custom' &>/dev/null; chmod +x ${ADMRufu}/install/udp-custom
    wget -O ${ADMRufu}/install/psiphon-manager 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/psiphon/psiphon-manager' &>/dev/null; chmod +x ${ADMRufu}/install/psiphon-manager
+   wget -O ${ADMRufu}/install/dropBear 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/dropBear/dropBear' &>/dev/null; chmod +x ${ADMRufu}/install/dropBear
 
    if [[ -e $autoStart/autoStart ]]; then
     $autoStart/autoStart -e /etc/ADMRufu/autoStart
