@@ -314,6 +314,7 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    sed -i '/Rufu/d' /root/.bashrc
    echo '[[ -e /etc/ADMRufu/bashrc ]] && source /etc/ADMRufu/bashrc' >> /etc/bash.bashrc
    update-locale LANG=en_US.UTF-8 LANGUAGE=en
+   [[ ! $(cat /etc/shells|grep "/bin/false") ]] && echo -e "/bin/false" >> /etc/shells
    clear
    title "-- ADMRufu INSTALADO --"
  else
