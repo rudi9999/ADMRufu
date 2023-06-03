@@ -16,6 +16,9 @@
 
 ## ACTUALIZACION
 
+2023-06-03
+4)- fix usuarios sin internet (beta)
+
  2023-05-10
 1)- protocolo psiphon agregado
 
