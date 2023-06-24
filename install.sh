@@ -281,6 +281,8 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    done
 
    autoStart="${ADMRufu}/bin" && [[ ! -d $autoStart ]] && mkdir $autoStart
+   varEntorno="${ADMRufu}/sbin" && [[ ! -d $varEntorno ]] && mkdir $varEntorno
+   
    wget -O $autoStart/autoStart 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/autoStart/autoStart' &>/dev/null; chmod +x $autoStart/autoStart
    wget -O $autoStart/auto-update 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/auto-update/auto-update' &>/dev/null; chmod +x $autoStart/auto-update
    
