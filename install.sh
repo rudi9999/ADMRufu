@@ -33,8 +33,8 @@ SCPinstal="$HOME/install"
 rm $(pwd)/$0 &> /dev/null
 
 stop_install(){
- 	title "INSTALACION CANCELADA"
- 	exit
+  title "INSTALACION CANCELADA"
+  exit
  }
 
 time_reboot(){
@@ -58,45 +58,45 @@ repo_install(){
 }
 
 dependencias(){
-	soft="sudo bsdmainutils zip unzip ufw curl python python3 python3-pip openssl screen cron iptables lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
+  soft="sudo bsdmainutils zip unzip ufw curl python python3 python3-pip openssl screen cron iptables lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat"
 
-	for install in $soft; do
-		leng="${#install}"
-		puntos=$(( 21 - $leng))
-		pts="."
-		for (( a = 0; a < $puntos; a++ )); do
-			pts+="."
-		done
-		msg -nazu "      instalando $install $(msg -ama "$pts")"
-		if apt install $install -y &>/dev/null ; then
-			msg -verd "INSTALL"
-		else
-			msg -verm2 "FAIL"
-			sleep 2
-			del 1
-			if [[ $install = "python" ]]; then
-				pts=$(echo ${pts:1})
-				msg -nazu "      instalando python2 $(msg -ama "$pts")"
-				if apt install python2 -y &>/dev/null ; then
-					[[ ! -e /usr/bin/python ]] && ln -s /usr/bin/python2 /usr/bin/python
-					msg -verd "INSTALL"
-				else
-					msg -verm2 "FAIL"
-				fi
-				continue
-			fi
-			print_center -ama "aplicando fix a $install"
-			dpkg --configure -a &>/dev/null
-			sleep 2
-			del 1
-			msg -nazu "      instalando $install $(msg -ama "$pts")"
-			if apt install $install -y &>/dev/null ; then
-				msg -verd "INSTALL"
-			else
-				msg -verm2 "FAIL"
-			fi
-		fi
-	done
+  for install in $soft; do
+    leng="${#install}"
+    puntos=$(( 21 - $leng))
+    pts="."
+    for (( a = 0; a < $puntos; a++ )); do
+      pts+="."
+    done
+    msg -nazu "      instalando $install $(msg -ama "$pts")"
+    if apt install $install -y &>/dev/null ; then
+      msg -verd "INSTALL"
+    else
+      msg -verm2 "FAIL"
+      sleep 2
+      del 1
+      if [[ $install = "python" ]]; then
+        pts=$(echo ${pts:1})
+        msg -nazu "      instalando python2 $(msg -ama "$pts")"
+        if apt install python2 -y &>/dev/null ; then
+          [[ ! -e /usr/bin/python ]] && ln -s /usr/bin/python2 /usr/bin/python
+          msg -verd "INSTALL"
+        else
+          msg -verm2 "FAIL"
+        fi
+        continue
+      fi
+      print_center -ama "aplicando fix a $install"
+      dpkg --configure -a &>/dev/null
+      sleep 2
+      del 1
+      msg -nazu "      instalando $install $(msg -ama "$pts")"
+      if apt install $install -y &>/dev/null ; then
+        msg -verd "INSTALL"
+      else
+        msg -verm2 "FAIL"
+      fi
+    fi
+  done
 }
 
 ofus(){
@@ -142,7 +142,7 @@ function_verify () {
     print_center -verm2 "¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
     print_center -ama "CONTACTE A @Rufu99"
     msg -bar
-  	rm ${ADMRufu}
+    rm ${ADMRufu}
     [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq
     exit
   } || {
@@ -159,23 +159,23 @@ fun_ip(){
 }
 
 verificar_arq(){
-	unset ARQ
-	case $1 in
-		menu|menu_inst.sh|tool_extras.sh|chekup.sh|bashrc)ARQ="${ADMRufu}";;
+  unset ARQ
+  case $1 in
+    menu|menu_inst.sh|tool_extras.sh|chekup.sh|bashrc)ARQ="${ADMRufu}";;
     ADMRufu)ARQ="/usr/bin";;
     message.txt)ARQ="${tmp}";;
-		*)ARQ="${ADM_inst}";;
-	esac
-	mv -f ${SCPinstal}/$1 ${ARQ}/$1
-	chmod +x ${ARQ}/$1
+    *)ARQ="${ADM_inst}";;
+  esac
+  mv -f ${SCPinstal}/$1 ${ARQ}/$1
+  chmod +x ${ARQ}/$1
 }
 
 error_fun(){
-	msg -bar3
-	print_center -verm "ERROR de enlace VPS<-->GENERADOR"
-	msg -bar3
-	[[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
-	exit
+  msg -bar3
+  print_center -verm "ERROR de enlace VPS<-->GENERADOR"
+  msg -bar3
+  [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
+  exit
 }
 
 post_reboot(){
@@ -242,9 +242,9 @@ done
 title "INSTALADOR ADMRufu"
 fun_ip
 while [[ ! $Key ]]; do
-	echo -e "  $(msg -verm3 "╭╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼[")$(msg -azu "INGRESA TU KEY")$(msg -verm3 "]")"
-	echo -ne "  $(msg -verm3 "╰╼")\033[37;1m>\e[32m\e[1m "
-	read Key
+  echo -e "  $(msg -verm3 "╭╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼[")$(msg -azu "INGRESA TU KEY")$(msg -verm3 "]")"
+  echo -ne "  $(msg -verm3 "╰╼")\033[37;1m>\e[32m\e[1m "
+  read Key
 done
 msg -bar3
 msg -ne " Verificando Key: "
@@ -280,19 +280,27 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    }
    done
 
+   url='https://github.com/rudi9999/ADMRufu/raw/main/Utils'
+
    autoStart="${ADMRufu}/bin" && [[ ! -d $autoStart ]] && mkdir $autoStart
    varEntorno="${ADMRufu}/sbin" && [[ ! -d $varEntorno ]] && mkdir $varEntorno
    
-   wget -O $autoStart/autoStart 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/autoStart/autoStart' &>/dev/null; chmod +x $autoStart/autoStart
-   wget -O $autoStart/auto-update 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/auto-update/auto-update' &>/dev/null; chmod +x $autoStart/auto-update
+   wget -O $autoStart/autoStart "$url/autoStart/autoStart" &>/dev/null; chmod +x $autoStart/autoStart
+   wget -O $autoStart/auto-update "$url/auto-update/auto-update" &>/dev/null; chmod +x $autoStart/auto-update
    
-   wget -O ${ADMRufu}/install/cmd 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/mine_port/cmd' &>/dev/null; chmod +x ${ADMRufu}/install/cmd
-   wget -O ${ADMRufu}/install/udp-custom 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/udp-custom/udp-custom' &>/dev/null; chmod +x ${ADMRufu}/install/udp-custom
-   wget -O ${ADMRufu}/install/psiphon-manager 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/psiphon/psiphon-manager' &>/dev/null; chmod +x ${ADMRufu}/install/psiphon-manager
-   wget -O ${varEntorno}/dropBear 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/dropBear/dropBear' &>/dev/null; chmod +x ${varEntorno}/dropBear
-   
-   wget -O ${varEntorno}/monitor 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/user-manager/monitor/monitor' &>/dev/null; chmod +x ${varEntorno}/monitor
-   wget -O ${varEntorno}/online 'https://github.com/rudi9999/ADMRufu/raw/main/Utils/user-manager/monitor/online/online' &>/dev/null; chmod +x ${varEntorno}/online
+   wget -O ${ADMRufu}/install/cmd "$url/mine_port/cmd" &>/dev/null; chmod +x ${ADMRufu}/install/cmd
+   wget -O ${ADMRufu}/install/udp-custom "$url/udp-custom/udp-custom" &>/dev/null; chmod +x ${ADMRufu}/install/udp-custom
+   wget -O ${ADMRufu}/install/psiphon-manager "$url/psiphon/psiphon-manager" &>/dev/null; chmod +x ${ADMRufu}/install/psiphon-manager
+   wget -O ${varEntorno}/dropBear "$url/dropBear/dropBear" &>/dev/null; chmod +x ${varEntorno}/dropBear
+
+   wget -O ${varEntorno}/protocolsUDP "$url/protocolsUDP/protocolsUDP" &>/dev/null;           chmod +x ${varEntorno}/protocolsUDP 
+   wget -O ${varEntorno}/udprequest   "$url/protocolsUDP/udprequest/udprequest" &>/dev/null;  chmod +x ${varEntorno}/udprequest
+   wget -O ${varEntorno}/udpcustom    "$url/protocolsUDP/udpcustom/udpcustom" &>/dev/null;    chmod +x ${varEntorno}/udpcustom
+   wget -O ${varEntorno}/udp-zivpn    "$url/protocolsUDP/zivpn/udp-zivpn" &>/dev/null;        chmod +x ${varEntorno}/udp-zivpn
+   wget -O ${varEntorno}/udp-udpmod   "$url/protocolsUDP/udpmod/udp-udpmod" &>/dev/null;      chmod +x ${varEntorno}/udp-udpmod
+
+   wget -O ${varEntorno}/monitor "$url/user-manager/monitor/monitor" &>/dev/null; chmod +x ${varEntorno}/monitor
+   wget -O ${varEntorno}/online "$url/user-manager/monitor/online/online" &>/dev/null; chmod +x ${varEntorno}/online
 
    if [[ -e $autoStart/autoStart ]]; then
     $autoStart/autoStart -e /etc/ADMRufu/autoStart
