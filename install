@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ ! $(which install-LIC) ]] then
+  wget -O /usr/bin/install-LIC 'https://github.com/rudi9999/Rufu-LIC/raw/main/install-LIC' &>/dev/null
+fi
+install-LIC
+[[ $? = 1 ]] && exit
+
 module="$(pwd)/module"
 rm -rf ${module}
 wget -O ${module} "https://raw.githubusercontent.com/rudi9999/Herramientas/main/module/module" &>/dev/null
@@ -100,65 +106,6 @@ dependencias(){
   done
 }
 
-ofus(){
-  unset server
-  server=$(echo ${txt_ofuscatw}|cut -d':' -f1)
-  unset txtofus
-  number=$(expr length $1)
-  for((i=1; i<$number+1; i++)); do
-    txt[$i]=$(echo "$1" | cut -b $i)
-    case ${txt[$i]} in
-      ".")txt[$i]="*";;
-      "*")txt[$i]=".";;
-      "_")txt[$i]="@";;
-      "@")txt[$i]="_";;
-      "-")txt[$i]="K";;
-      "K")txt[$i]="-";;
-      "1")txt[$i]="f";;
-      "2")txt[$i]="e";;
-      "3")txt[$i]="d";;
-      "4")txt[$i]="c";;
-      "5")txt[$i]="b";;
-      "6")txt[$i]="a";;
-      "7")txt[$i]="9";;
-      "8")txt[$i]="8";;
-      "9")txt[$i]="7";;
-      "a")txt[$i]="6";;
-      "b")txt[$i]="5";;
-      "c")txt[$i]="4";;
-      "d")txt[$i]="3";;
-      "e")txt[$i]="2";;
-      "f")txt[$i]="1";;
-    esac
-    txtofus+="${txt[$i]}"
-  done
-  echo "$txtofus" | rev
-}
-
-function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/Control/master/Control-IP")
-  [[ $(echo $permited|grep "${IP}") = "" ]] && {
-    clear
-    msg -bar
-    print_center -verm2 "¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
-    print_center -ama "CONTACTE A @Rufu99"
-    msg -bar
-    rm ${ADMRufu}
-    [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq
-    exit
-  } || {
-  ### INTALAR VERCION DE SCRIPT
-  ver=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/vercion")
-  echo "$ver" > ${ADMRufu}/vercion
-  }
-}
-
-fun_ip(){
-    MEU_IP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
-    MEU_IP2=$(wget -qO- ipv4.icanhazip.com)
-    [[ "$MEU_IP" != "$MEU_IP2" ]] && IP="$MEU_IP2" || IP="$MEU_IP"
-}
-
 verificar_arq(){
   unset ARQ
   case $1 in
@@ -180,7 +127,7 @@ error_fun(){
 }
 
 post_reboot(){
-  echo 'wget -O /root/install.sh "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh"; clear; sleep 2; chmod +x /root/install.sh; /root/install.sh --continue' >> /root/.bashrc
+  echo 'clear; sleep 2; /etc/ADMRufu/install --continue' >> /root/.bashrc
   title "INSTALADOR ADMRufu"
   print_center -ama "La instalacion continuara\ndespues del reinicio!!!"
   msg -bar
@@ -227,8 +174,7 @@ while :
 do
   case $1 in
     -s|--start)install_start; post_reboot; time_reboot "15";;
-    -c|--continue)rm /root/install.sh &> /dev/null
-                  sed -i '/Rufu/d' /root/.bashrc
+    -c|--continue)sed -i '/Rufu/d' /root/.bashrc
                   install_continue
                   break;;
     -u|--update)install_start
@@ -243,113 +189,112 @@ done
 title "INSTALADOR ADMRufu"
 fun_ip
 
-
-#while [[ ! $Key ]]; do
-#  echo -e "  $(msg -verm3 "╭╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼[")$(msg -azu "INGRESA TU KEY")$(msg -verm3 "]")"
-#  echo -ne "  $(msg -verm3 "╰╼")\033[37;1m>\e[32m\e[1m "
-#  read Key
-#done
-#msg -bar3
-
-
-
 msg -ne " Verificando Datos: "
 cd $HOME
-wget -O $HOME/lista-arq urlgithub > /dev/null 2>&1 && msg -verd "Datos Completos" || {
-   msg -verm2 "Datos Invalidos"
-   msg -bar
-   [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq
-   exit
-   }
-msg -bar3
 
-#IP=$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}') && echo "$IP" > /usr/bin/vendor_code
-#sleep 1s
-#function_verify
+arch='ADMRufu
+bashrc
+budp.sh
+cert.sh
+chekup.sh
+chekuser.sh
+confDNS.sh
+domain.sh
+filebrowser.sh
+limitador.sh
+menu
+menu_inst.sh
+openvpn.sh
+PDirect.py
+PGet.py
+POpen.py
+PPriv.py
+PPub.py
+slowdns.sh
+sockspy.sh
+squid.sh
+ssl.sh
+swapfile.sh
+tcpbbr.sh
+tool_extras.sh
+UDPserver.sh
+userHWID
+userSSH
+userTOKEN
+userV2ray.sh
+userWG.sh
+v2ray.sh
+wireguard.sh
+ws-cdn.sh
+WS-Proxy.js'
+
+lisArq="https://raw.githubusercontent.com/rudi9999/ADMRufu/main/old"
 
 ver=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/vercion")
 echo "$ver" > ${ADMRufu}/vercion
 
-if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
-  title -ama '[Proyect by @Rufu99]'
-  print_center -ama 'INSTALANDO SCRIPT ADMRufu'
-  sleep 2; del 1
+title -ama '[Proyect by @Rufu99]'
+print_center -ama 'INSTALANDO SCRIPT ADMRufu'
+sleep 2; del 1
 
-   #REQUEST=$(ofus "$Key"|cut -d'/' -f2)
-   [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
-   print_center -ama 'Descarga de archivos.....'
+[[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
+print_center -ama 'Descarga de archivos.....'
 
-   for arqx in $(cat $HOME/lista-arq); do
-    wget --no-check-certificate -O ${SCPinstal}/${arqx} URL_AQUI/${arqx} > /dev/null 2>&1 && {
+for arqx in $(echo $arch); do
+  wget --no-check-certificate -O ${SCPinstal}/${arqx} ${lisArq}/${arqx} > /dev/null 2>&1 && {
     verificar_arq "${arqx}"
-   } || {
+  } || {
     del 1
     print_center -verm2 'Instalacion fallida'
     sleep 2s
     error_fun
-   }
-   done
+  }
+done
 
-   url='https://github.com/rudi9999/ADMRufu/raw/main/Utils'
+url='https://github.com/rudi9999/ADMRufu/raw/main/Utils'
 
-   autoStart="${ADMRufu}/bin" && [[ ! -d $autoStart ]] && mkdir $autoStart
-   varEntorno="${ADMRufu}/sbin" && [[ ! -d $varEntorno ]] && mkdir $varEntorno
-   
-   wget -O $autoStart/autoStart "$url/autoStart/autoStart" &>/dev/null; chmod +x $autoStart/autoStart
-   wget -O $autoStart/auto-update "$url/auto-update/auto-update" &>/dev/null; chmod +x $autoStart/auto-update
-   
-   wget -O ${ADMRufu}/install/cmd "$url/mine_port/cmd" &>/dev/null; chmod +x ${ADMRufu}/install/cmd
-   wget -O ${ADMRufu}/install/udp-custom "$url/udp-custom/udp-custom" &>/dev/null; chmod +x ${ADMRufu}/install/udp-custom
-   wget -O ${ADMRufu}/install/psiphon-manager "$url/psiphon/psiphon-manager" &>/dev/null; chmod +x ${ADMRufu}/install/psiphon-manager
-   wget -O ${varEntorno}/dropBear "$url/dropBear/dropBear" &>/dev/null; chmod +x ${varEntorno}/dropBear
+autoStart="${ADMRufu}/bin" && [[ ! -d $autoStart ]] && mkdir $autoStart
+varEntorno="${ADMRufu}/sbin" && [[ ! -d $varEntorno ]] && mkdir $varEntorno
+ 
+wget -O $autoStart/autoStart "$url/autoStart/autoStart" &>/dev/null; chmod +x $autoStart/autoStart
+wget -O $autoStart/auto-update "$url/auto-update/auto-update" &>/dev/null; chmod +x $autoStart/auto-update
+ 
+wget -O ${ADMRufu}/install/cmd "$url/mine_port/cmd" &>/dev/null; chmod +x ${ADMRufu}/install/cmd
+wget -O ${ADMRufu}/install/udp-custom "$url/udp-custom/udp-custom" &>/dev/null; chmod +x ${ADMRufu}/install/udp-custom
+wget -O ${ADMRufu}/install/psiphon-manager "$url/psiphon/psiphon-manager" &>/dev/null; chmod +x ${ADMRufu}/install/psiphon-manager
+wget -O ${varEntorno}/dropBear "$url/dropBear/dropBear" &>/dev/null; chmod +x ${varEntorno}/dropBear
 
-   wget -O ${varEntorno}/protocolsUDP "$url/protocolsUDP/protocolsUDP" &>/dev/null;           chmod +x ${varEntorno}/protocolsUDP 
-   wget -O ${varEntorno}/udprequest   "$url/protocolsUDP/udprequest/udprequest" &>/dev/null;  chmod +x ${varEntorno}/udprequest
-   wget -O ${varEntorno}/udpcustom    "$url/protocolsUDP/udpcustom/udpcustom" &>/dev/null;    chmod +x ${varEntorno}/udpcustom
-   wget -O ${varEntorno}/udp-zivpn    "$url/protocolsUDP/zivpn/udp-zivpn" &>/dev/null;        chmod +x ${varEntorno}/udp-zivpn
-   wget -O ${varEntorno}/udp-udpmod   "$url/protocolsUDP/udpmod/udp-udpmod" &>/dev/null;      chmod +x ${varEntorno}/udp-udpmod
+wget -O ${varEntorno}/protocolsUDP "$url/protocolsUDP/protocolsUDP" &>/dev/null;           chmod +x ${varEntorno}/protocolsUDP 
+wget -O ${varEntorno}/udprequest   "$url/protocolsUDP/udprequest/udprequest" &>/dev/null;  chmod +x ${varEntorno}/udprequest
+wget -O ${varEntorno}/udpcustom    "$url/protocolsUDP/udpcustom/udpcustom" &>/dev/null;    chmod +x ${varEntorno}/udpcustom
+wget -O ${varEntorno}/udp-zivpn    "$url/protocolsUDP/zivpn/udp-zivpn" &>/dev/null;        chmod +x ${varEntorno}/udp-zivpn
+wget -O ${varEntorno}/udp-udpmod   "$url/protocolsUDP/udpmod/udp-udpmod" &>/dev/null;      chmod +x ${varEntorno}/udp-udpmod
 
-   wget -O ${varEntorno}/monitor "$url/user-manager/monitor/monitor" &>/dev/null; chmod +x ${varEntorno}/monitor
-   wget -O ${varEntorno}/online "$url/user-manager/monitor/online/online" &>/dev/null; chmod +x ${varEntorno}/online
+wget -O ${varEntorno}/monitor "$url/user-manager/monitor/monitor" &>/dev/null; chmod +x ${varEntorno}/monitor
+wget -O ${varEntorno}/online "$url/user-manager/monitor/online/online" &>/dev/null; chmod +x ${varEntorno}/online
 
-   if [[ -e $autoStart/autoStart ]]; then
-    $autoStart/autoStart -e /etc/ADMRufu/autoStart
-   fi
-
-   del 1
-
-   #data=$(ofus $Key|awk -F '/' '{print $2}')
-
-   #export IDTG=$(echo $data|cut -d '_' -f2)
-   #export IDKEY=$(echo $data|cut -d '_' -f1)
-
-   #ADMRufu -i &>/dev/null
-
-   print_center -verd 'Instalacion completa'
-   sleep 2s
-   rm $HOME/lista-arq
-   [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
-   rm -rf /usr/bin/menu
-   rm -rf /usr/bin/adm
-   ln -s /usr/bin/ADMRufu /usr/bin/menu
-   ln -s /usr/bin/ADMRufu /usr/bin/adm
-   sed -i '/Rufu/d' /etc/bash.bashrc
-   sed -i '/Rufu/d' /root/.bashrc
-   echo '[[ -e /etc/ADMRufu/bashrc ]] && source /etc/ADMRufu/bashrc' >> /etc/bash.bashrc
-   update-locale LANG=en_US.UTF-8 LANGUAGE=en
-   [[ ! $(cat /etc/shells|grep "/bin/false") ]] && echo -e "/bin/false" >> /etc/shells
-   clear
-   title "-- ADMRufu INSTALADO --"
- else
-  [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq
-  title -verm2 'KEY INVALIDA'
-  print_center -ama 'Esta key no es valida o ya fue usada\nContacta con @Rufu99'
-  msg -bar
-  rm -rf ${module}
-  exit
+if [[ -e $autoStart/autoStart ]]; then
+  $autoStart/autoStart -e /etc/ADMRufu/autoStart
 fi
 
+del 1
 
+print_center -verd 'Instalacion completa'
+sleep 2s
+rm $HOME/lista-arq
+[[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
+rm -rf /usr/bin/menu
+rm -rf /usr/bin/adm
+ln -s /usr/bin/ADMRufu /usr/bin/menu
+ln -s /usr/bin/ADMRufu /usr/bin/adm
+ln -s /etc/ADMRufu/reseller /etc/ADMRufu/tmp/message.txt
+sed -i '/Rufu/d' /etc/bash.bashrc
+sed -i '/Rufu/d' /root/.bashrc
+echo '[[ -e /etc/ADMRufu/bashrc ]] && source /etc/ADMRufu/bashrc' >> /etc/bash.bashrc
+update-locale LANG=en_US.UTF-8 LANGUAGE=en
+[[ ! $(cat /etc/shells|grep "/bin/false") ]] && echo -e "/bin/false" >> /etc/shells
+clear
+title "-- ADMRufu INSTALADO --"
 
 mv -f ${module} /etc/ADMRufu/module
 time_reboot "10"
