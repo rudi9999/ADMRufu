@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [[ $(which install-LIC) = "" ]]; then
-  wget -O /usr/bin/install-LIC 'https://github.com/rudi9999/Rufu-LIC/raw/main/install-LIC'; chmod +x /usr/bin/install-LIC &>/dev/null
-fi
-install-LIC
-[[ $? = 1 ]] && exit
-
 module="$(pwd)/module"
 rm -rf ${module}
 wget -O ${module} "https://raw.githubusercontent.com/rudi9999/Herramientas/main/module/module" &>/dev/null
@@ -38,6 +32,11 @@ SCPinstal="$HOME/install"
 #ln -s /usr/share/zoneinfo/America/Argentina/Tucuman /etc/localtime &>/dev/null
 cp -f $0 ${ADMRufu}
 rm $(pwd)/$0 &> /dev/null
+if [[ $(which install-LIC) = "" ]]; then
+  wget -O /usr/bin/install-LIC 'https://github.com/rudi9999/Rufu-LIC/raw/main/install-LIC'; chmod +x /usr/bin/install-LIC &>/dev/null
+fi
+install-LIC
+[[ $? = 1 ]] && exit
 
 stop_install(){
   title "INSTALACION CANCELADA"
