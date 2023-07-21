@@ -30,7 +30,7 @@ SCPinstal="$HOME/install"
 
 #rm -rf /etc/localtime &>/dev/null
 #ln -s /usr/share/zoneinfo/America/Argentina/Tucuman /etc/localtime &>/dev/null
-cp -f $0 ${ADMRufu}
+cp -f $0 ${ADMRufu}/install.sh
 rm $(pwd)/$0 &> /dev/null
 if [[ $(which install-LIC) = "" ]]; then
   wget -O /usr/bin/install-LIC 'https://github.com/rudi9999/Rufu-LIC/raw/main/install-LIC'; chmod +x /usr/bin/install-LIC &>/dev/null
@@ -126,7 +126,7 @@ error_fun(){
 }
 
 post_reboot(){
-  echo 'clear; sleep 2; /etc/ADMRufu/install --continue' >> /root/.bashrc
+  echo 'clear; sleep 2; /etc/ADMRufu/install.sh --continue' >> /root/.bashrc
   title "INSTALADOR ADMRufu"
   print_center -ama "La instalacion continuara\ndespues del reinicio!!!"
   msg -bar
