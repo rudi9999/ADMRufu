@@ -48,7 +48,7 @@ export _ram=$(printf ' %-9s' "$(free -h | grep -i mem | awk {'print $2'})")
 export _usor=$(printf '%-8s' "$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')")
 
 if [[ ! -f ${ADM_tmp}/style ]]; then
-  echo -e "infsys 1\ninfsys2 0\nport 0\nport2 1\nresel 0\ncontador 1\nlimit 0" > ${ADM_tmp}/style
+  echo -e "infsys 1\ninfsys2 0\nport 0\nport2 1\nresel 1\ncontador 1\nlimit 0" > ${ADM_tmp}/style
 fi
 
 if [[ ! $(id -u) = 0 ]]; then
