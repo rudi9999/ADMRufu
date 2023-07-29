@@ -641,10 +641,10 @@ update(){
 	msg -bar
 	opcion=$(selection_fun 1)
 	case $opcion in
-		1)  rm -rf /root/install.sh*
-				wget -O /root/install.sh https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install.sh &>/dev/null
-				chmod +x /root/install.sh*
-				/root/install.sh --update;;
+		1)  rm -rf /root/install*
+				wget -O /root/install.sh https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install &>/dev/null
+				chmod +x /root/install*
+				/root/install --update;;
 	esac
 }
 
