@@ -150,15 +150,15 @@ baner_fun(){
 fun_autorun () {
   clear
   msg -bar
-if [[ $(cat /etc/bash.bashrc | grep -w /usr/bin/menu) ]]; then
-  cat /etc/bash.bashrc | grep -v /usr/bin/menu > /tmp/bash
-  mv -f /tmp/bash /etc/bash.bashrc
+if [[ $(cat /etc/ADMRufu/bashrc | grep -w /usr/bin/menu) ]]; then
+  cat /etc/ADMRufu/bashrc | grep -v /usr/bin/menu > /tmp/bash
+  mv -f /tmp/bash /etc/ADMRufu/bashrc
   msg -ama "               $(fun_trans "AUTO-INICIO REMOVIDO")"
   msg -bar
 else
-  cp /etc/bash.bashrc /tmp/bash
+  cp /etc/ADMRufu/bashrc /tmp/bash
   echo '/usr/bin/menu' >> /tmp/bash
-  mv -f /tmp/bash /etc/bash.bashrc
+  mv -f /tmp/bash /etc/ADMRufu/bashrc
   msg -verd "              $(fun_trans "AUTO-INICIO AGREGADO")"
   msg -bar
 fi
@@ -317,7 +317,7 @@ clear
 declare -A inst
 pid_inst
 
-if [[ $(cat /etc/bash.bashrc | grep -w /usr/bin/menu) ]]; then
+if [[ $(cat /etc/ADMRufu/bashrc | grep -w /usr/bin/menu) ]]; then
   AutoRun="\033[1;32m[ON]"
 else
   AutoRun="\033[1;31m[OFF]"
