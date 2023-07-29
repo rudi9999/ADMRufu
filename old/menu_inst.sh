@@ -352,7 +352,7 @@ case $selection in
   0)return 0;;
   1)dropBear;;
   2)${ADM_inst}/sockspy.sh;;
-  3)${ADM_inst}/ssl.sh;;
+  3)Stunnel;;
   4)${ADM_inst}/v2ray.sh;;
   5)${ADM_inst}/ws-cdn.sh;;
   6)${ADM_inst}/budp.sh;;
