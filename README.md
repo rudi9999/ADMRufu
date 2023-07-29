@@ -26,7 +26,7 @@
     
     * modificar rangos iptables
 
-1)- se exporto el codigo a c++
+1)- stunnel-manager se exporto el codigo a c++
 
     añadio port de redireccion manual
     
