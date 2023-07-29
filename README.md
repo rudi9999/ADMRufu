@@ -17,12 +17,13 @@
 ## ACTUALIZACION
 
  2023-07-29
+ 
 2)- nuevo sub-menu de protocolos UDP
     udp request, udp custom, udp hysteria (udpmod)
     * modificar puertos
     * modificar rangos iptables
 
-1)- se exporto el codigo a c++
+1)- se exporto el codigo a c++\n
     añadio port de redireccion manual
     ver port ssl activos desde el menu
 
