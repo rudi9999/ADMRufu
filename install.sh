@@ -212,11 +212,9 @@ PPub.py
 slowdns.sh
 sockspy.sh
 squid.sh
-ssl.sh
 swapfile.sh
 tcpbbr.sh
 tool_extras.sh
-UDPserver.sh
 userHWID
 userSSH
 userTOKEN
@@ -268,6 +266,7 @@ wget -O ${varEntorno}/udprequest   "$url/protocolsUDP/udprequest/udprequest" &>/
 wget -O ${varEntorno}/udpcustom    "$url/protocolsUDP/udpcustom/udpcustom" &>/dev/null;    chmod +x ${varEntorno}/udpcustom
 wget -O ${varEntorno}/udp-zivpn    "$url/protocolsUDP/zivpn/udp-zivpn" &>/dev/null;        chmod +x ${varEntorno}/udp-zivpn
 wget -O ${varEntorno}/udp-udpmod   "$url/protocolsUDP/udpmod/udp-udpmod" &>/dev/null;      chmod +x ${varEntorno}/udp-udpmod
+wget -O ${varEntorno}/Stunnel      "$url/Stunnel/Stunnel" &>/dev/null;                     chmod +x ${varEntorno}/Stunnel
 
 wget -O ${varEntorno}/monitor "$url/user-manager/monitor/monitor" &>/dev/null; chmod +x ${varEntorno}/monitor
 wget -O ${varEntorno}/online "$url/user-manager/monitor/online/online" &>/dev/null; chmod +x ${varEntorno}/online
