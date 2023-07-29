@@ -212,11 +212,9 @@ PPub.py
 slowdns.sh
 sockspy.sh
 squid.sh
-ssl.sh
 swapfile.sh
 tcpbbr.sh
 tool_extras.sh
-UDPserver.sh
 userHWID
 userSSH
 userTOKEN
