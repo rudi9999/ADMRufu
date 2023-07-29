@@ -1,19 +1,19 @@
+ Actulizacion 2023-07-29
+2)- nuevo sub-menu de protocolos UDP
+    udp request, udp custom, udp hysteria (udpmod)
+    * modificar puertos
+    * modificar rangos iptables
+
+1)- se exporto el codigo a c++
+    añadio port de redireccion manual
+    ver port ssl activos desde el menu
+
  Actulizacion 2023-06-03
-4)- fix usuarios sin internet (beta)
+1)- fix usuarios sin internet (beta)
 
  Actulizacion 2023-05-10
-3)- psiphon-manager agregado
+1)- psiphon-manager agregado
     protocolo psiphon agregado
-    
- Actulizacion 2023-04-25
-2)- UDP-CUSTOM agregado
-    protocolo udp-custom agregado
-    apps (HTTPCustom)
-    
- Actulizacion 2023-04-07
- 
-1)- UDPserver, opcion de seleccion de ip
-    deteccion de ip nat y publica
 
  NOTA:
    - De tratarse de una funcion que no usas
