@@ -303,6 +303,13 @@ pid_inst(){
   else
     inst[udpC]="\033[1;31m[OFF]"
   fi
+
+  inst[UDPS]="\033[1;31m[OFF]"
+  if [[ $(systemctl is-active udprequest) = 'active' ]] || [[ $(systemctl is-active udpcustom) = 'active' ]] || [[ $(systemctl is-active zivpn) = 'active' ]] || [[ $(systemctl is-active udpmod) = 'active' ]]; then
+    inst[UDPS]="\033[1;32m[ON]"
+  fi
+
+
 }
 
 menu_inst () {
@@ -331,9 +338,14 @@ echo -ne "$(msg -verd "  [1]")$(msg -verm2 ">") $(msg -azu "DROPBEAR      ${inst
 echo -ne "$(msg -verd "  [2]")$(msg -verm2 ">") $(msg -azu "SOCKS PYTHON  ${inst[python]}")" && echo -e "$(msg -verd "  [9]")$(msg -verm2 ">") $(msg -azu "SLOWDNS       ${inst[dns-serve]}")"
 echo -ne "$(msg -verd "  [3]")$(msg -verm2 ">") $(msg -azu "SSL           ${inst[stunnel4]}")" && echo -e "$(msg -verd " [10]")$(msg -verm2 ">") $(msg -azu "WIREGUARD     ${inst[wg]}")" #&& echo -e "$(msg -verd "  [9]")$(msg -verm2 ">") $(msg -azu "SHADOW-LIBEV  $(pid_inst ss-server)")"
 echo -ne "$(msg -verd "  [4]")$(msg -verm2 ">") $(msg -azu "V2RAY         ${inst[v2ray]}")" && echo -e "$(msg -verd " [11]")$(msg -verm2 ">") $(msg -azu "CHEKUS-ONLIAPP${inst[php]}")" #&& echo -e "$(msg -verd " [10]")$(msg -verm2 ">") $(msg -azu "SHADOW-NORMAL $(pid_inst ssserver)")"
-echo -ne "$(msg -verd "  [5]")$(msg -verm2 ">") $(msg -azu "OVER WEBSOCKET${inst[$v_node]}")" && echo -e "$(msg -verd " [12]")$(msg -verm2 ">") $(msg -azu "UDP-REQUEST   ${inst[udpS]}")"
-echo -ne "$(msg -verd "  [6]")$(msg -verm2 ">") $(msg -azu "BADVPN-UDP    ${inst[badvpn]}")" && echo -e "$(msg -verd " [13]")$(msg -verm2 ">") $(msg -azu "UDP-CUSTOM    ${inst[udpC]}")" 
-echo -ne "$(msg -verd "  [7]")$(msg -verm2 ">") $(msg -azu "SQUID         ${inst[squid]}")" && echo -e "$(msg -verd " [14]")$(msg -verm2 ">") $(msg -azu "PSIPHON       ${inst[psiphond]}")"
+#echo -ne "$(msg -verd "  [5]")$(msg -verm2 ">") $(msg -azu "OVER WEBSOCKET${inst[$v_node]}")" && echo -e "$(msg -verd " [12]")$(msg -verm2 ">") $(msg -azu "UDP-REQUEST   ${inst[udpS]}")"
+
+
+
+echo -ne "$(msg -verd "  [5]")$(msg -verm2 ">") $(msg -azu "OVER WEBSOCKET${inst[$v_node]}")" && echo -e "$(msg -verd " [12]")$(msg -verm2 ">") $(msg -azu "PROTOCOLOS UDP${inst[UDPS]}")"
+#echo -ne "$(msg -verd "  [6]")$(msg -verm2 ">") $(msg -azu "BADVPN-UDP    ${inst[badvpn]}")" && echo -e "$(msg -verd " [13]")$(msg -verm2 ">") $(msg -azu "UDP-CUSTOM    ${inst[udpC]}")" 
+echo -ne "$(msg -verd "  [6]")$(msg -verm2 ">") $(msg -azu "BADVPN-UDP    ${inst[badvpn]}")" && echo -e "$(msg -verd " [13]")$(msg -verm2 ">") $(msg -azu "PSIPHON       ${inst[psiphond]}")"
+echo -e "$(msg -verd "  [7]")$(msg -verm2 ">") $(msg -azu "SQUID         ${inst[squid]}")"
 
 echo -e "\e[31m============== \e[1;33mCONFIGURACIONES RAPIDAS\e[0m\e[31m ==============\e[0m"
 echo -ne "$(msg -verd " [15]")$(msg -verm2 ">") $(msg -azu "BANNER SSH")" && echo -e "$(msg -verd "          [20]")$(msg -verm2 ">") $(msg -azu "ACELERACION TCPBBR")"
@@ -361,10 +373,12 @@ case $selection in
   9)${ADM_inst}/slowdns.sh;;
   10)${ADM_inst}/wireguard.sh;;
   11)${ADM_inst}/chekuser.sh;;
-  12)${ADM_inst}/UDPserver.sh;;
-  13)${ADM_inst}/udp-custom;;
+  12)protocolsUDP;;
+  #12)${ADM_inst}/UDPserver.sh;;
+  #13)${ADM_inst}/udp-custom;;
+  13)${ADM_inst}/psiphon-manager;;
+  #14)${ADM_inst}/psiphon-manager;;
   15)baner_fun;;
-  14)${ADM_inst}/psiphon-manager;;
   16)cache_ram;;
   17)${ADM_inst}/swapfile.sh;;
   18)${ADM_inst}/confDNS.sh;;
