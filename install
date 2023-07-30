@@ -25,6 +25,7 @@ trap "CTRL_C" INT TERM EXIT
 
 ADMRufu="/etc/ADMRufu" && [[ ! -d ${ADMRufu} ]] && mkdir ${ADMRufu}
 ADM_inst="${ADMRufu}/install" && [[ ! -d ${ADM_inst} ]] && mkdir ${ADM_inst}
+etcDir="${ADMRufu}/etc" && [[ ! -d ${etcDir} ]] && mkdir ${etcDir}
 tmp="${ADMRufu}/tmp" && [[ ! -d ${tmp} ]] && mkdir ${tmp}
 SCPinstal="$HOME/install"
 
