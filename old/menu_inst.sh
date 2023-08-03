@@ -370,7 +370,7 @@ case $selection in
   6)${ADM_inst}/budp.sh;;
   7)${ADM_inst}/squid.sh;;
   8)${ADM_inst}/openvpn.sh;;
-  9)${ADM_inst}/slowdns.sh;;
+  9)Slowdns;;
   10)${ADM_inst}/wireguard.sh;;
   11)${ADM_inst}/chekuser.sh;;
   12)protocolsUDP;;
