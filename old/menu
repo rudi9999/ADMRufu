@@ -111,7 +111,7 @@ fun_trans(){
 }
 
 mine_port(){
-	/etc/ADMRufu/install/cmd -p MOD
+	cmd -p MOD
 }
 
 ofus () {
