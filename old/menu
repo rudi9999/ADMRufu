@@ -642,7 +642,7 @@ update(){
 	opcion=$(selection_fun 1)
 	case $opcion in
 		1)  rm -rf /root/install*
-				wget -O /root/install.sh https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install &>/dev/null
+				wget -O /root/install https://raw.githubusercontent.com/rudi9999/ADMRufu/main/install &>/dev/null
 				chmod +x /root/install*
 				/root/install --update;;
 	esac
