@@ -323,7 +323,7 @@ if [[ $(cat ${ADM_tmp}/style|grep -w "port2"|awk '{print $2}') = "1" ]] ; then
 fi
 echo -e "\e[0m\e[31m================ \e[1;33mMENU DE PROTOCOLOS\e[0m\e[31m =================\e[0m"
 echo -ne "$(msg -verd "  [1]")$(msg -verm2 ">") $(msg -azu "DROPBEAR      ${inst[dropbear]}")" && echo -e "$(msg -verd "  [8]")$(msg -verm2 ">") $(msg -azu "OPENVPN       ${inst[openvpn]}")"
-echo -ne "$(msg -verd "  [2]")$(msg -verm2 ">") $(msg -azu "SOCKS PYTHON  ${inst[python]}")" && echo -e "$(msg -verd "  [9]")$(msg -verm2 ">") $(msg -azu "SLOWDNS       ${inst[dns-serve]}")"
+echo -ne "$(msg -verd "  [2]")$(msg -verm2 ">") $(msg -azu "SOCKS PYTHON  ${inst[python]}")" && echo -e "$(msg -verd "  [9]")$(msg -verm2 ">") $(msg -azu "SLOWDNS       ${inst[ttdns]}")"
 echo -ne "$(msg -verd "  [3]")$(msg -verm2 ">") $(msg -azu "SSL           ${inst[stunnel4]}")" && echo -e "$(msg -verd " [10]")$(msg -verm2 ">") $(msg -azu "WIREGUARD     ${inst[wg]}")" #&& echo -e "$(msg -verd "  [9]")$(msg -verm2 ">") $(msg -azu "SHADOW-LIBEV  $(pid_inst ss-server)")"
 echo -ne "$(msg -verd "  [4]")$(msg -verm2 ">") $(msg -azu "V2RAY         ${inst[v2ray]}")" && echo -e "$(msg -verd " [11]")$(msg -verm2 ">") $(msg -azu "CHEKUS-ONLIAPP${inst[php]}")" #&& echo -e "$(msg -verd " [10]")$(msg -verm2 ">") $(msg -azu "SHADOW-NORMAL $(pid_inst ssserver)")"
 #echo -ne "$(msg -verd "  [5]")$(msg -verm2 ">") $(msg -azu "OVER WEBSOCKET${inst[$v_node]}")" && echo -e "$(msg -verd " [12]")$(msg -verm2 ">") $(msg -azu "UDP-REQUEST   ${inst[udpS]}")"
