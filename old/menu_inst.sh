@@ -278,12 +278,12 @@ root_pass () {
 
 pid_inst(){
   v_node="$(which nodejs)" && v_node=$(ls -l "$v_node"|awk -F '/' '{print $NF}'|awk '{print $NF}')
-  proto="dropbear python stunnel4 v2ray $v_node badvpn squid openvpn dns-serve php psiphond"
+  proto="dropbear python stunnel4 v2ray $v_node badvpn squid openvpn ttdns php psiphond"
   portas=$(lsof -V -i -P -n | grep -v "ESTABLISHED" |grep -v "COMMAND")
   for list in $proto; do
     case $list in
       dropbear|psiphond|python|stunnel4|v2ray|badvpn|squid|php|"$v_node") portas2=$(echo "$portas"|grep -w "LISTEN"|grep -w "$list") && [[ $(echo "${portas2}"|grep "$list") ]] && inst[$list]="\033[1;32m[ON] " || inst[$list]="\033[1;31m[OFF]";;
-      dns-serve|openvpn) portas2=$(echo "$portas"|grep -w "$list") && [[ $(echo "${portas2}"|grep "$list") ]] && inst[$list]="\033[1;32m[ON] " || inst[$list]="\033[1;31m[OFF]";;
+      ttdns|openvpn) portas2=$(echo "$portas"|grep -w "$list") && [[ $(echo "${portas2}"|grep "$list") ]] && inst[$list]="\033[1;32m[ON] " || inst[$list]="\033[1;31m[OFF]";;
     esac
   done
   [[ $(dpkg --get-selections|grep -w 'wireguard'|head -1) ]] && {
@@ -291,18 +291,6 @@ pid_inst(){
   } || {
     inst[wg]="\033[1;31m[OFF]"
   }
-
-  if [[ $(systemctl is-active UDPserver) = 'active' ]]; then
-    inst[udpS]="\033[1;32m[ON]"
-  else
-    inst[udpS]="\033[1;31m[OFF]"
-  fi
-
-  if [[ $(systemctl is-active udp-custom) = 'active' ]]; then
-    inst[udpC]="\033[1;32m[ON]"
-  else
-    inst[udpC]="\033[1;31m[OFF]"
-  fi
 
   inst[UDPS]="\033[1;31m[OFF]"
   if [[ $(systemctl is-active udprequest) = 'active' ]] || [[ $(systemctl is-active udpcustom) = 'active' ]] || [[ $(systemctl is-active zivpn) = 'active' ]] || [[ $(systemctl is-active udpmod) = 'active' ]]; then
