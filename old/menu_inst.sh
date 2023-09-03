@@ -278,11 +278,11 @@ root_pass () {
 
 pid_inst(){
   v_node="$(which nodejs)" && v_node=$(ls -l "$v_node"|awk -F '/' '{print $NF}'|awk '{print $NF}')
-  proto="dropbear python stunnel4 v2ray $v_node badvpn squid openvpn ttdns php psiphond"
+  proto="dropbear python stunnel4 v2ray $v_node badvpn squid openvpn ttdns php psiphond ws-epro"
   portas=$(lsof -V -i -P -n | grep -v "ESTABLISHED" |grep -v "COMMAND")
   for list in $proto; do
     case $list in
-      dropbear|psiphond|python|stunnel4|v2ray|badvpn|squid|php|"$v_node") portas2=$(echo "$portas"|grep -w "LISTEN"|grep -w "$list") && [[ $(echo "${portas2}"|grep "$list") ]] && inst[$list]="\033[1;32m[ON] " || inst[$list]="\033[1;31m[OFF]";;
+      ws-epro|dropbear|psiphond|python|stunnel4|v2ray|badvpn|squid|php|"$v_node") portas2=$(echo "$portas"|grep -w "LISTEN"|grep -w "$list") && [[ $(echo "${portas2}"|grep "$list") ]] && inst[$list]="\033[1;32m[ON] " || inst[$list]="\033[1;31m[OFF]";;
       ttdns|openvpn) portas2=$(echo "$portas"|grep -w "$list") && [[ $(echo "${portas2}"|grep "$list") ]] && inst[$list]="\033[1;32m[ON] " || inst[$list]="\033[1;31m[OFF]";;
     esac
   done
@@ -326,14 +326,9 @@ echo -ne "$(msg -verd "  [1]")$(msg -verm2 ">") $(msg -azu "DROPBEAR      ${inst
 echo -ne "$(msg -verd "  [2]")$(msg -verm2 ">") $(msg -azu "SOCKS PYTHON  ${inst[python]}")" && echo -e "$(msg -verd "  [9]")$(msg -verm2 ">") $(msg -azu "SLOWDNS       ${inst[ttdns]}")"
 echo -ne "$(msg -verd "  [3]")$(msg -verm2 ">") $(msg -azu "SSL           ${inst[stunnel4]}")" && echo -e "$(msg -verd " [10]")$(msg -verm2 ">") $(msg -azu "WIREGUARD     ${inst[wg]}")" #&& echo -e "$(msg -verd "  [9]")$(msg -verm2 ">") $(msg -azu "SHADOW-LIBEV  $(pid_inst ss-server)")"
 echo -ne "$(msg -verd "  [4]")$(msg -verm2 ">") $(msg -azu "V2RAY         ${inst[v2ray]}")" && echo -e "$(msg -verd " [11]")$(msg -verm2 ">") $(msg -azu "CHEKUS-ONLIAPP${inst[php]}")" #&& echo -e "$(msg -verd " [10]")$(msg -verm2 ">") $(msg -azu "SHADOW-NORMAL $(pid_inst ssserver)")"
-#echo -ne "$(msg -verd "  [5]")$(msg -verm2 ">") $(msg -azu "OVER WEBSOCKET${inst[$v_node]}")" && echo -e "$(msg -verd " [12]")$(msg -verm2 ">") $(msg -azu "UDP-REQUEST   ${inst[udpS]}")"
-
-
-
 echo -ne "$(msg -verd "  [5]")$(msg -verm2 ">") $(msg -azu "OVER WEBSOCKET${inst[$v_node]}")" && echo -e "$(msg -verd " [12]")$(msg -verm2 ">") $(msg -azu "PROTOCOLOS UDP${inst[UDPS]}")"
-#echo -ne "$(msg -verd "  [6]")$(msg -verm2 ">") $(msg -azu "BADVPN-UDP    ${inst[badvpn]}")" && echo -e "$(msg -verd " [13]")$(msg -verm2 ">") $(msg -azu "UDP-CUSTOM    ${inst[udpC]}")" 
 echo -ne "$(msg -verd "  [6]")$(msg -verm2 ">") $(msg -azu "BADVPN-UDP    ${inst[badvpn]}")" && echo -e "$(msg -verd " [13]")$(msg -verm2 ">") $(msg -azu "PSIPHON       ${inst[psiphond]}")"
-echo -e "$(msg -verd "  [7]")$(msg -verm2 ">") $(msg -azu "SQUID         ${inst[squid]}")"
+echo -ne "$(msg -verd "  [7]")$(msg -verm2 ">") $(msg -azu "SQUID         ${inst[squid]}")"  && echo -e "$(msg -verd " [14]")$(msg -verm2 ">") $(msg -azu "WS-EPRO       ${inst[psiphond]}")"
 
 echo -e "\e[31m============== \e[1;33mCONFIGURACIONES RAPIDAS\e[0m\e[31m ==============\e[0m"
 echo -ne "$(msg -verd " [15]")$(msg -verm2 ">") $(msg -azu "BANNER SSH")" && echo -e "$(msg -verd "          [20]")$(msg -verm2 ">") $(msg -azu "ACELERACION TCPBBR")"
@@ -365,7 +360,7 @@ case $selection in
   #12)${ADM_inst}/UDPserver.sh;;
   #13)${ADM_inst}/udp-custom;;
   13)${ADM_inst}/psiphon-manager;;
-  #14)${ADM_inst}/psiphon-manager;;
+  14)epro-ws;;
   15)baner_fun;;
   16)cache_ram;;
   17)${ADM_inst}/swapfile.sh;;
