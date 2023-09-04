@@ -1,3 +1,8 @@
+ Actulizacion 2023-09-04
+1)- nuevo protocolo python directo
+* soporta cloudflare free
+* solo payloads simples GET
+
  Actulizacion 2023-09-03
 1)- nuevo ws-epro manager
 
