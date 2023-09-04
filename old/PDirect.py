@@ -41,11 +41,11 @@ else:
 if args.texto:
     STATUS_TXT = args.texto
 elif STATUS_RESP == '101':
-    STATUS_TXT = '<font color="red">Switching Protocols</font>'
+    STATUS_TXT = 'Web Socket Protocol Handshake\r\nConnection: Upgrade\r\nUpgrade: websocket'
 else:
-    STATUS_TXT = '<font color="red">Connection established</font>'
+    STATUS_TXT = '<font color="red">Connection Established</font>\r\nContent-length: 0'
 
-RESPONSE = str('HTTP/1.1 ' + STATUS_RESP + ' ' + STATUS_TXT + '\r\nContent-length: 0\r\n\r\nHTTP/1.1 200 Connection established\r\n\r\n')
+RESPONSE = str('HTTP/1.1 ' + STATUS_RESP + ' ' + STATUS_TXT + '\r\n\r\nHTTP/1.1 200 Connection Established\r\n\r\n')
 
 class Server(threading.Thread):
     def __init__(self, host, port):
