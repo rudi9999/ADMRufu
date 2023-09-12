@@ -1,5 +1,5 @@
 if [[ $(echo $PATH|grep "/usr/games") = "" ]]; then PATH=$PATH:/usr/games; fi
-export PATH=$PATH:/etc/ADMRufu/sbin
+# export PATH=$PATH:/etc/ADMRufu/sbin
 [[ $UID = 0 ]] && screen -dmS up /etc/ADMRufu/chekup.sh
 v=$(cat /etc/ADMRufu/vercion)
 [[ -e /etc/ADMRufu/new_vercion ]] && up=$(cat /etc/ADMRufu/new_vercion) || up=$v
