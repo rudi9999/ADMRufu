@@ -607,6 +607,7 @@ remove_script(){
 	rm -rf /usr/bin/adm
 	rm -rf /usr/bin/ADMRufu
 	rm -rf /etc/ADMRufu
+	rm -rf /etc/profile.d/rufu.sh
 	echo "SCRIPT REMOVIDO, REINICIANDO VPS"
 	sleep 5
 	reboot
@@ -777,4 +778,3 @@ case ${selection} in
 		 #0) pkill -KILL -u root ;;
 esac
 ${ADMRufu}/menu
-
