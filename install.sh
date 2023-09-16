@@ -280,6 +280,7 @@ fi
 #echo '#!/bin/bash
 #export PATH="$PATH:/etc/ADMRufu/sbin"' > /etc/profile.d/rufu.sh
 #chmod +x /etc/profile.d/rufu.sh
+rm -rf /etc/profile.d/rufu.sh
 
 sbinList=$(ls ${varEntorno})
 for i in `echo $sbinList`; do
