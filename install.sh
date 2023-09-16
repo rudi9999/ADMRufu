@@ -276,10 +276,15 @@ if [[ -e $autoStart/autoStart ]]; then
   $autoStart/autoStart -e /etc/ADMRufu/autoStart
 fi
 
-profileDir="/etc/profile.d" && [[ ! -d ${profileDir} ]] && mkdir ${profileDir}
-echo '#!/bin/bash
-export PATH="$PATH:/etc/ADMRufu/sbin"' > /etc/profile.d/rufu.sh
-chmod +x /etc/profile.d/rufu.sh
+#profileDir="/etc/profile.d" && [[ ! -d ${profileDir} ]] && mkdir ${profileDir}
+#echo '#!/bin/bash
+#export PATH="$PATH:/etc/ADMRufu/sbin"' > /etc/profile.d/rufu.sh
+#chmod +x /etc/profile.d/rufu.sh
+
+sbinList=$(ls ${varEntorno})
+for i in `echo $sbinList`; do
+  ln -s ${varEntorno}/$i /usr/bin/$i
+done
 
 del 1
 
