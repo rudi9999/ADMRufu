@@ -603,6 +603,10 @@ remove_script(){
 	[[ "$opcion" != @(s|S|y|Y) ]] && return
 	sed -i '/Rufu/d' /root/.bashrc
 	sed -i '/Rufu/d' /etc/bash.bashrc
+	local sbin=$(ls /etc/ADMRufu/sbin)	
+	for i in `echo $sbin`; do
+		rm -rf /usr/bin/$i
+	done
 	rm -rf /usr/bin/menu
 	rm -rf /usr/bin/adm
 	rm -rf /usr/bin/ADMRufu
