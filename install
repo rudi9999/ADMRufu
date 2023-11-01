@@ -275,7 +275,7 @@ wget --no-cache -O ${varEntorno}/Stunnel      "$url/Stunnel/Stunnel" &>/dev/null
 wget --no-cache -O ${varEntorno}/Slowdns      "$url/SlowDNS/Slowdns" &>/dev/null;                     chmod +x ${varEntorno}/Slowdns
 wget --no-cache -O ${varEntorno}/cmd          "$url/mine_port/cmd" &>/dev/null;                       chmod +x ${varEntorno}/cmd
 wget --no-cache -O ${varEntorno}/epro-ws      "$url/epro-ws/epro-ws" &>/dev/null;                     chmod +x ${varEntorno}/epro-ws
-wget --no-cache -O ${varEntorno}/socksPY      "$url/socksPY/socksPY" &>/dev/null;                     chmod +x ${varEntorno}/socksPY
+#wget --no-cache -O ${varEntorno}/socksPY      "$url/socksPY/socksPY" &>/dev/null;                     chmod +x ${varEntorno}/socksPY
 
 wget --no-cache -O ${varEntorno}/monitor "$url/user-manager/monitor/monitor" &>/dev/null; chmod +x ${varEntorno}/monitor
 wget --no-cache -O ${varEntorno}/online "$url/user-manager/monitor/online/online" &>/dev/null; chmod +x ${varEntorno}/online
