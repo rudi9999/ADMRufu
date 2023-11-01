@@ -251,6 +251,12 @@ url='https://github.com/rudi9999/ADMRufu/raw/main/Utils'
 
 autoStart="${ADMRufu}/bin" && [[ ! -d $autoStart ]] && mkdir $autoStart
 varEntorno="${ADMRufu}/sbin" && [[ ! -d $varEntorno ]] && mkdir $varEntorno
+
+cat <<EOF > $varEntorno/ls-cmd
+#!/bin/bash
+ls /etc/ADMRufu/sbin|sed 's/ /\n/'
+EOF
+chmod +x $varEntorno/ls-cmd
  
 wget --no-cache -O $autoStart/autoStart "$url/autoStart/autoStart" &>/dev/null; chmod +x $autoStart/autoStart
 wget --no-cache -O $autoStart/auto-update "$url/auto-update/auto-update" &>/dev/null; chmod +x $autoStart/auto-update
