@@ -254,6 +254,7 @@ varEntorno="${ADMRufu}/sbin" && [[ ! -d $varEntorno ]] && mkdir $varEntorno
 
 cat <<EOF > $varEntorno/ls-cmd
 #!/bin/bash
+echo 'menu'
 ls /etc/ADMRufu/sbin|sed 's/ /\n/'
 EOF
 chmod +x $varEntorno/ls-cmd
