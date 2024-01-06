@@ -252,13 +252,13 @@ url='https://github.com/rudi9999/ADMRufu/raw/main/Utils'
 autoStart="${ADMRufu}/bin" && [[ ! -d $autoStart ]] && mkdir $autoStart
 varEntorno="${ADMRufu}/sbin" && [[ ! -d $varEntorno ]] && mkdir $varEntorno
 
-cat <<EOF > $varEntorno/ls-cmd
+cat <<EOF>$varEntorno/ls-cmd
 #!/bin/bash
 echo 'menu'
 ls /etc/ADMRufu/sbin|sed 's/ /\n/'
 EOF
 chmod +x $varEntorno/ls-cmd
- 
+
 wget --no-cache -O $autoStart/autoStart "$url/autoStart/autoStart" &>/dev/null; chmod +x $autoStart/autoStart
 wget --no-cache -O $autoStart/auto-update "$url/auto-update/auto-update" &>/dev/null; chmod +x $autoStart/auto-update
 
@@ -277,8 +277,9 @@ wget --no-cache -O ${varEntorno}/cmd          "$url/mine_port/cmd" &>/dev/null; 
 wget --no-cache -O ${varEntorno}/epro-ws      "$url/epro-ws/epro-ws" &>/dev/null;                     chmod +x ${varEntorno}/epro-ws
 wget --no-cache -O ${varEntorno}/socksPY      "$url/socksPY/socksPY" &>/dev/null;                     chmod +x ${varEntorno}/socksPY
 
-wget --no-cache -O ${varEntorno}/monitor "$url/user-manager/monitor/monitor" &>/dev/null; chmod +x ${varEntorno}/monitor
-wget --no-cache -O ${varEntorno}/online "$url/user-manager/monitor/online/online" &>/dev/null; chmod +x ${varEntorno}/online
+wget --no-cache -O ${varEntorno}/monitor      "$url/user-manager/monitor/monitor" &>/dev/null;        chmod +x ${varEntorno}/monitor
+wget --no-cache -O ${varEntorno}/online       "$url/user-manager/monitor/online/online" &>/dev/null;  chmod +x ${varEntorno}/online
+wget --no-cache -O ${varEntorno}/user-info    "$url/user-managers/user-info" &>/dev/null;             chmod +x ${varEntorno}/user-info
 
 if [[ -e $autoStart/autoStart ]]; then
   $autoStart/autoStart -e /etc/ADMRufu/autoStart
