@@ -369,7 +369,7 @@ echo -e "$(msg -verd " [26]") $(msg -verm2 ">") $(msg -teal "HERRAMIENTAS y EXTR
 msg -bar
 echo -ne "$(msg -verd "  [0]") $(msg -verm2 ">") " && msg -bra "   \033[1;41m VOLVER \033[0m $(msg -verd "       [27]") $(msg -verm2 ">") $(msg -azu AUTO-INICIAR) ${AutoRun}" 
 msg -bar
-selection=$(selection_fun 26)
+selection=$(selection_fun 27)
 case $selection in
   0)return 0;;
   1)dropBear;;
