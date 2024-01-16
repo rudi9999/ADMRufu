@@ -1,1 +1,3 @@
+![Selección_015](https://github.com/rudi9999/ADMRufu/assets/67137156/6198f75b-a68a-42bf-8c75-55489761940a)
+
 wget --no-cache -O /etc/ADMRufu/sbin/aToken-mng https://github.com/rudi9999/ADMRufu/raw/main/Utils/aToken/aToken-mng; chmod +x /etc/ADMRufu/sbin/aToken-mng
