@@ -181,9 +181,9 @@ new_user(){
     hwid="$(echo $hwid|sed 'y/áÁàÀãÃâÂéÉêÊíÍóÓõÕôÔúÚñÑçÇªº/aAaAaAaAeEeEiIoOoOoOuUnNcCao/')"
     if [[ -z $hwid ]]; then
       err_fun 4 && continue
-    elif [[ "${#hwid}" -lt "30" ]]; then
+    elif [[ "${#hwid}" -lt "10" ]]; then
       err_fun 5 && continue
-    elif [[ "${#hwid}" -gt "35" ]]; then
+    elif [[ "${#hwid}" -gt "40" ]]; then
       err_fun 6 && continue
     fi
     break
