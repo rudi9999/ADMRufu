@@ -1,3 +1,10 @@
+ Actulizacion 2024-01-16
+1)- nuevo sistema de autenticacion token en linea (aToken)
+2)- nuevo menu de protocolos socks python añadido al menu
+* soporte python 2 y 3
+* añadio mas opciones para mejor adminstracion y logs
+3)- fix user HWID muy corto.
+
  Actulizacion 2023-09-04
 1)- nuevo protocolo python directo
 * soporta cloudflare free
@@ -5,34 +12,6 @@
 
  Actulizacion 2023-09-03
 1)- nuevo ws-epro manager
-
- Actulizacion 2023-08-03
-1)- Slowdns-manager se exporto a c++
-    * modificar puerto de trafico
-    * modificar dominio ns
-    * generar nuevas claves
-nota: si tiene activo slowdns
-esta version de manager no es compatible
-con los ajustes anteriores. antes de usar
-esta version, deves desinstalar la version
-anterior.
-
- Actulizacion 2023-07-29
-2)- nuevo sub-menu de protocolos UDP
-    udp request, udp custom, udp hysteria (udpmod)
-    * modificar puertos
-    * modificar rangos iptables
-
-1)- stunnel-manager se exporto el codigo a c++
-    añadio port de redireccion manual
-    ver port ssl activos desde el menu
-
- Actulizacion 2023-06-03
-1)- fix usuarios sin internet (beta)
-
- Actulizacion 2023-05-10
-1)- psiphon-manager agregado
-    protocolo psiphon agregado
 
  NOTA:
    - De tratarse de una funcion que no usas
