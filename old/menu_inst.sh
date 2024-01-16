@@ -373,8 +373,10 @@ selection=$(selection_fun 26)
 case $selection in
   0)return 0;;
   1)dropBear;;
-  #2)${ADM_inst}/sockspy.sh;;
   2)socksPY;;
+  3)Stunnel;;
+  4)${ADM_inst}/v2ray.sh;;
+  5)${ADM_inst}/ws-cdn.sh;;
   6)${ADM_inst}/budp.sh;;
   7)${ADM_inst}/squid.sh;;
   8)${ADM_inst}/openvpn.sh;;
