@@ -16,6 +16,15 @@
 
 ## ACTUALIZACION
 
+ Actulizacion 2024-01-16
+1)- nuevo sistema de autenticacion token en linea (aToken)
+
+2)- nuevo menu de protocolos socks python añadido al menu
+ * soporte python 2 y 3
+ * añadio mas opciones para mejor adminstracion y logs
+
+3)- fix user HWID muy corto.
+
  2023-07-29
  
 2)- nuevo sub-menu de protocolos UDP
