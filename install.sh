@@ -281,6 +281,8 @@ wget --no-cache -O ${varEntorno}/monitor      "$url/user-manager/monitor/monitor
 wget --no-cache -O ${varEntorno}/online       "$url/user-manager/monitor/online/online" &>/dev/null;  chmod +x ${varEntorno}/online
 wget --no-cache -O ${varEntorno}/user-info    "$url/user-managers/user-info" &>/dev/null;             chmod +x ${varEntorno}/user-info
 wget --no-cache -O ${varEntorno}/aToken-mng   "$url/aToken/aToken-mng" &>/dev/null;                   chmod +x ${varEntorno}/aToken-mng
+wget --no-cache -O ${varEntorno}/makeUser     "$url/user-managers/makeUser" &>/dev/null;              chmod +x ${varEntorno}/makeUser
+
 
 if [[ -e $autoStart/autoStart ]]; then
   $autoStart/autoStart -e /etc/ADMRufu/autoStart
