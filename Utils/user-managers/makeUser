@@ -4,6 +4,7 @@ add_user(){
   #Fecha=`date +%d-%m-%y-%R`
 
   if [ ! -z "$(cat /etc/passwd |grep $1: |grep -vi [a-z]$1 |grep -v [0-9]$1)" ]; then
+    echo '2'
     exit 2
   fi
 
@@ -36,12 +37,14 @@ add_user(){
     sleep 1s
     chage -E ${valid} -W 0 $acount &>/dev/null
   else
+    echo '3'
     exit 3
   fi
 }
 
 show_help() {
-    echo "Uso: $0 [-u|--user] <usuario> [-p|--pass] <contraseña> [-c|--conection] <días> [-t|--type] <ssh/token/hwid>"
+    #echo "Uso: $0 [-u|--user] <usuario> [-p|--pass] <contraseña> [-c|--conection] <días> [-t|--type] <ssh/token/hwid>"
+    echo '1'
     exit 1
 }
 
@@ -133,4 +136,5 @@ if [ ! -z "$error" ]; then
 fi
 
 add_user "${datos['user']}" "${datos['pass']}" "${datos['dias']}" "${datos['coneccion']}" "${datos['type']}"
+echo '0'
 #echo "${datos['user']}" "${datos['pass']}" "${datos['dias']}" "${datos['coneccion']}" "${datos['type']}"
