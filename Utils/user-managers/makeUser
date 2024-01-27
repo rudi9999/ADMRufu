@@ -1,0 +1,136 @@
+#!/bin/bash
+
+add_user(){
+  #Fecha=`date +%d-%m-%y-%R`
+
+  if [ ! -z "$(cat /etc/passwd |grep $1: |grep -vi [a-z]$1 |grep -v [0-9]$1)" ]; then
+    exit 2
+  fi
+
+  valid=$(date '+%C%y-%m-%d' -d " +$3 days")
+
+  case $5 in
+    SSH|ssh)      data="$4,$2"
+                  acount="$1"
+                  pass="$2";;
+    TOKEN|token)  data="$5,$1"
+                  acount="$2"
+                  pass=$(cat /etc/ADMRufu/user/passwd_token|head -1|tr -d '\n');;
+    HWID|hwid)    data="$5,$1"
+                  acount="$2"
+                  pass="$2";;
+  esac
+
+  osl_v=$(openssl version|awk '{print $2}'|sed 's/\.//g')
+  osl_v=${osl_v:0:5}
+
+  if [ $osl_v -gt 111 ]; then
+    pass=$(openssl passwd -6 ${pass})
+  else
+    pass=$(openssl passwd -1 ${pass})
+  fi
+
+  #useradd -M -s /bin/false -e ${valid} -K PASS_MAX_DAYS=$3 -p ${pass} -c $4,$2 $1 &>/dev/null
+  useradd -M -s /bin/false -p ${pass} -c $data $acount &>/dev/null
+  if [ $? -eq 0 ];then
+    sleep 1s
+    chage -E ${valid} -W 0 $acount &>/dev/null
+  else
+    exit 3
+  fi
+}
+
+show_help() {
+    echo "Uso: $0 [-u|--user] <usuario> [-p|--pass] <contraseña> [-c|--conection] <días> [-t|--type] <ssh/token/hwid>"
+    exit 1
+}
+
+# Inicializa las variables con valores predeterminados
+declare -A datos
+
+datos['user']=""
+datos['pass']=""
+datos['coneccion']=""
+datos['type']=""
+datos['dias']=""
+
+# Verifica si se proporcionaron argumentos
+if [ $# -eq 0 ]; then
+    echo "Error: Faltan argumentos."
+    show_help
+fi
+
+# Procesa los argumentos
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --user|-u)
+            if [ -z "$2" ]; then
+                echo "Error: Falta el argumento para --user."
+                show_help
+            fi
+            datos['user']="$2"
+            shift 2
+            ;;
+        --pass|-p)
+            if [ -z "$2" ]; then
+                echo "Error: Falta el argumento para --pass."
+                show_help
+            fi
+            datos['pass']="$2"
+            shift 2
+            ;;
+        --dias|-d)
+            if [ -z "$2" ]; then
+                echo "Error: Falta el argumento para --dias."
+                show_help
+            fi
+            datos['dias']="$2"
+            shift 2
+            ;;
+        --coneccion|-c)
+            if [ -z "$2" ]; then
+                echo "Error: Falta el argumento para --coneccion."
+                show_help
+            fi
+            datos['coneccion']="$2"
+            shift 2
+            ;;
+        --type|-t)
+            if [ -z "$2" ]; then
+                echo "Error: Falta el argumento para --type."
+                show_help
+            fi
+            datos['type']="$2"
+            shift 2
+            ;;
+        --help|-h)
+            show_help
+            ;;
+        *)
+            echo "Error: Argumento desconocido $1"
+            show_help
+            ;;
+    esac
+done
+
+error=""
+wordsn="user pass dias type"
+
+if [ ! -z "${datos['type']}" ] && [ "${datos['type']}" == "ssh" ];then
+  wordsn+=" coneccion"
+fi
+
+for i in $wordsn; do
+  if [ -z "${datos[$i]}" ]; then
+    error+="--$i "
+
+  fi
+done
+
+if [ ! -z "$error" ]; then
+  echo "falta de argumentos: $error"
+  show_help
+fi
+
+add_user "${datos['user']}" "${datos['pass']}" "${datos['dias']}" "${datos['coneccion']}" "${datos['type']}"
+#echo "${datos['user']}" "${datos['pass']}" "${datos['dias']}" "${datos['coneccion']}" "${datos['type']}"
