@@ -2,7 +2,7 @@
 
 ## install
 
-`wget --no-cache https://github.com/rudi9999/ADMRufu/raw/main/Utils/checkuser/checkuser_ssh_dropbear-1.0.deb; depkg -i checkuser_ssh_dropbear-1.0.deb`
+`wget --no-cache https://github.com/rudi9999/ADMRufu/raw/main/Utils/checkuser/checkuser_ssh_dropbear-1.0.deb; depkg -i checkuser_ssh_dropbear-1.0.deb; rm -rf checkuser_ssh_dropbear-1.0.deb`
 
 ## nota: en dropbear solo compatible con el Mod@Rufu99
 
