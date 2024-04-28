@@ -4,4 +4,4 @@
 
 ## nota: en dropbear solo compatiblem con el Mod@Rufu99
 
-mod dropbear: `https://github.com/rudi9999/dropbear-MOD/tree/main`
+mod dropbear: https://github.com/rudi9999/dropbear-MOD/tree/main
