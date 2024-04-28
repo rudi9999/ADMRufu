@@ -1,6 +1,6 @@
 # checkuser en banner ssh y en dropbear-mod @Rufu99
 
-## nota: en dropbear solo compatiblem con el Mod@Rufu99
+## nota: en dropbear solo compatible con el Mod@Rufu99
 
 mod dropbear: https://github.com/rudi9999/dropbear-MOD/tree/main
 
