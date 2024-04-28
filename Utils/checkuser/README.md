@@ -1,5 +1,9 @@
 # checkuser en banner ssh y en dropbear-mod @Rufu99
 
+## install
+
+wget --no-cache ; depkg -i 
+
 ## nota: en dropbear solo compatible con el Mod@Rufu99
 
 mod dropbear: https://github.com/rudi9999/dropbear-MOD/tree/main
