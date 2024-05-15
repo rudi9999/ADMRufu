@@ -284,6 +284,9 @@ wget --no-cache -O ${varEntorno}/aToken-mng   "$url/aToken/aToken-mng" &>/dev/nu
 wget --no-cache -O ${varEntorno}/makeUser     "$url/user-managers/makeUser" &>/dev/null;              chmod +x ${varEntorno}/makeUser
 wget --no-cache -O ${varEntorno}/genssl       "$url/genCert/genssl" &>/dev/null;                      chmod +x ${varEntorno}/genssl
 wget --no-cache -O ${autoStart}/sql           "$url/Csqlite/sql" &>/dev/null;                         chmod +x ${autoStart}/sql
+wget --no-cache -O ${varEntorno}/banner       "$url/banner/banner" &>/dev/null;                       chmod +x ${varEntorno}/banner
+
+
 
 
 if [[ -e $autoStart/autoStart ]]; then
