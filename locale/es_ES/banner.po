@@ -1,0 +1,77 @@
+msgid "Descargando Instalador"
+msgstr ""
+
+msgid "BANNER DE CONECCION"
+msgstr ""
+
+msgid "se muestra antes de la autenticacion."
+msgstr ""
+
+msgid "es el mas usado desde hace tiempo."
+msgstr ""
+
+msgid "BANNER AUTENTICACION + CHECKUSER"
+msgstr ""
+
+msgid "este se muestra despues de la autenticacion."
+msgstr ""
+
+msgid "este permite imprimir informacion del usuario."
+msgstr ""
+
+msgid "funciona en ssh."
+msgstr ""
+
+msgid "para tener el mismo efecto en dropbear"
+msgstr ""
+
+msgid "requiere instalar el mod dropbear de @Rufu99"
+msgstr ""
+
+msgid "USO DE CHECKUSER"
+msgstr ""
+
+msgid "añade palabras claves en el codigo del banner."
+msgstr ""
+
+msgid "seran remplazada por la informacion del usuario."
+msgstr ""
+
+msgid "PALABRAS CLAVES"
+msgstr ""
+
+msgid "USER - sera remplazada por el nombre del usuario."
+msgstr ""
+
+msgid "EXP - se remplaza por la fecha de expiracion."
+msgstr ""
+
+msgid "DAYS - remplasada por dias restantes a la expiracion."
+msgstr ""
+
+msgid "NOTA"
+msgstr ""
+
+msgid "si el dato de expiracion del usuario no se encuentra."
+msgstr ""
+
+msgid "EXP y DAYS contendran la palabra 'never'"
+msgstr ""
+
+msgid "EJEMPLO"
+msgstr ""
+
+msgid "ADMINISTRADOR BANNER"
+msgstr ""
+
+msgid "CREAR, EDITAR BANNER (nano)"
+msgstr ""
+
+msgid "VOLVER"
+msgstr ""
+
+msgid "AYUDA"
+msgstr ""
+
+msgid "Seleccione una opcion"
+msgstr ""
