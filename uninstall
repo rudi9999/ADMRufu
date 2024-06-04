@@ -1,0 +1,25 @@
+#!/bin/bash
+
+rm $(pwd)/$0 &> /dev/null
+
+while [[ $(ps x|grep -v grep|grep menu|grep pts|wc -l) != 0 ]]; do
+	sleep 1
+done
+
+remove_script(){
+	sed -i '/Rufu/d' /root/.bashrc
+	sed -i '/Rufu/d' /etc/bash.bashrc
+	local sbin=$(ls /etc/ADMRufu/sbin)	
+	for i in `echo $sbin`; do
+		rm -rf /usr/bin/$i
+	done
+	rm -rf /usr/bin/menu
+	rm -rf /usr/bin/adm
+	rm -rf /usr/bin/ADMRufu
+	rm -rf /etc/ADMRufu
+	rm -rf /etc/profile.d/rufu.sh
+	sleep 5
+	reboot
+}
+
+remove_script
