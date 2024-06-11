@@ -228,6 +228,7 @@ lisArq="https://raw.githubusercontent.com/rudi9999/ADMRufu/main/old"
 
 ver=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/vercion")
 echo "$ver" > ${ADMRufu}/vercion
+echo -e "Idioma=es_ES.utf8\nRutaLocales=locale" > ${ADMRufu}/lang.ini
 
 title -ama '[Proyect by @Rufu99]'
 print_center -ama 'INSTALANDO SCRIPT ADMRufu'
