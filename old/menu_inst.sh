@@ -387,7 +387,7 @@ case $selection in
   13)epro-ws;;
   14)${ADM_inst}/chekuser.sh;;
   15)aToken-mng;;
-  16)baner_fun;;
+  16)banner;;
   17)cache_ram;;
   18)${ADM_inst}/swapfile.sh;;
   19)${ADM_inst}/confDNS.sh;;
