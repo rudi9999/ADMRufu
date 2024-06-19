@@ -286,7 +286,7 @@ wget --no-cache -O ${varEntorno}/makeUser     "$url/user-managers/makeUser" &>/d
 wget --no-cache -O ${varEntorno}/genssl       "$url/genCert/genssl" &>/dev/null;                      chmod +x ${varEntorno}/genssl
 wget --no-cache -O ${autoStart}/sql           "$url/Csqlite/sql" &>/dev/null;                         chmod +x ${autoStart}/sql
 wget --no-cache -O ${varEntorno}/banner       "$url/banner/banner" &>/dev/null;                       chmod +x ${varEntorno}/banner
-
+wget --no-cache -O ${varEntorno}/monitor-m    "$url/user-manager/monitor/monitor-m/monitor-m" &>/dev/null; chmod +x ${varEntorno}/monitor-m
 
 wget --no-cache -O /etc/ADMRufu/uninstall "https://github.com/rudi9999/ADMRufu/raw/main/uninstall" &>/dev/null; chmod +x /etc/ADMRufu/uninstall
 
