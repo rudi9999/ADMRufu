@@ -6,7 +6,7 @@ file="/etc/ADMRufu/sbin/userSSH"
 
 [[ -f ${file} ]] && rm $file
 
-wget --no-cache -O $file 
+wget --no-cache -O $file "https://github.com/rudi9999/ADMRufu/raw/main/Utils/user-managers/userSSH/userSSH"
 
 chmod +x $file
 
