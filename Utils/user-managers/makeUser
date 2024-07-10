@@ -16,7 +16,8 @@ add_user(){
                   pass="$2";;
     TOKEN|token)  data="$5,$1"
                   acount="$2"
-                  pass=$(cat /etc/ADMRufu/user/passwd_token|head -1|tr -d '\n');;
+                  pass=$(getent passwd admrufu|awk -F ':' '{print $5}'|cut -d ',' -f2|tr -d '\n')
+                  [ -z $pass ] && pass=$(cat /etc/ADMRufu/user/passwd_token|head -1|tr -d '\n');;
     HWID|hwid)    data="$5,$1"
                   acount="$2"
                   pass="$2";;
