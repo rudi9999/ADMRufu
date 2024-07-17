@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 rm -rf $(pwd)/$0
