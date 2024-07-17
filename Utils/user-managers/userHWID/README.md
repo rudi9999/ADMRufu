@@ -1,6 +1,6 @@
 # Instalacion
 
-rm -rf install.sh*; wget --no-cache https://github.com/rudi9999/ADMRufu/raw/main/Utils/user-managers/userSSH/install.sh; chmod +x install.sh;
+rm -rf install.sh*; wget --no-cache https://github.com/rudi9999/ADMRufu/raw/main/Utils/user-managers/userHWID/install.sh; chmod +x install.sh;
 ./install.sh
 
 ![Selección_013](https://github.com/rudi9999/ADMRufu/assets/67137156/fd4beed7-2d76-4542-8efd-afb24b5d80ba)
