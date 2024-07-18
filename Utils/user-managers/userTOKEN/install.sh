@@ -6,7 +6,7 @@ file="/etc/ADMRufu/sbin/userTOKEN"
 
 [[ -f ${file} ]] && rm $file
 
-wget --no-cache -O $file "https://github.com/rudi9999/ADMRufu/raw/main/Utils/user-managers/userTOKEN/userTOKE"
+wget --no-cache -O $file "https://github.com/rudi9999/ADMRufu/raw/main/Utils/user-managers/userTOKEN/userTOKEN"
 
 chmod +x $file
 
