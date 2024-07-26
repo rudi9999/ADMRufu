@@ -288,6 +288,10 @@ wget --no-cache -O ${autoStart}/sql           "$url/Csqlite/sql" &>/dev/null;   
 wget --no-cache -O ${varEntorno}/banner       "$url/banner/banner" &>/dev/null;                       chmod +x ${varEntorno}/banner
 wget --no-cache -O ${varEntorno}/monitor-m    "$url/user-manager/monitor/monitor-m/monitor-m" &>/dev/null; chmod +x ${varEntorno}/monitor-m
 
+wget --no-cache -O ${varEntorno}/userSSH      "$url/user-managers/userSSH/userSSH" &>/dev/null;       chmod +x ${varEntorno}/userSSH
+wget --no-cache -O ${varEntorno}/userHWID     "$url/user-managers/userHWID/userHWID" &>/dev/null;     chmod +x ${varEntorno}/userHWID
+wget --no-cache -O ${varEntorno}/userTOKEN    "$url/user-managers/userTOKEN/userTOKEN" &>/dev/null;   chmod +x ${varEntorno}/userTOKEN
+
 wget --no-cache -O /etc/ADMRufu/uninstall "https://github.com/rudi9999/ADMRufu/raw/main/uninstall" &>/dev/null; chmod +x /etc/ADMRufu/uninstall
 
 if [[ -e $autoStart/autoStart ]]; then
