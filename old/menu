@@ -680,9 +680,9 @@ acount_mode(){
 	[[ ! -e ${ADM_user}/userMODE ]] && echo "userSSH" > ${ADM_user}/userMODE
 	mode=$(cat ${ADM_user}/userMODE)
 	case $mode in
-		userSSH)${ADM_inst}/userSSH;;
-		userHWID)${ADM_inst}/userHWID;;
-		userTOKEN)${ADM_inst}/userTOKEN;;
+		userSSH)userSSH;;
+		userHWID)userHWID;;
+		userTOKEN)userTOKEN;;
 	esac
 }
 
