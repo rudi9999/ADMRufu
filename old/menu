@@ -1,6 +1,6 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
-rm -rf instalscript.sh &>/dev/nullS
+rm -rf instalscript.sh &>/dev/null
 
 for i in $@; do
 		case $i in
