@@ -1,17 +1,15 @@
+ Actulizacion 2024-07-26
+1)- nuevo admin de cuentas SSH/HWID/TOKEN
+2)- nuevo limitador de cuentas
+* limita conecciones multiples
+* limita cuentas expiradas
+
  Actulizacion 2024-01-16
 1)- nuevo sistema de autenticacion token en linea (aToken)
 2)- nuevo menu de protocolos socks python añadido al menu
 * soporte python 2 y 3
 * añadio mas opciones para mejor adminstracion y logs
 3)- fix user HWID muy corto.
-
- Actulizacion 2023-09-04
-1)- nuevo protocolo python directo
-* soporta cloudflare free
-* solo payloads simples GET
-
- Actulizacion 2023-09-03
-1)- nuevo ws-epro manager
 
  NOTA:
    - De tratarse de una funcion que no usas
