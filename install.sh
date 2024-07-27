@@ -292,6 +292,8 @@ wget --no-cache -O ${varEntorno}/userSSH      "$url/user-managers/userSSH/userSS
 wget --no-cache -O ${varEntorno}/userHWID     "$url/user-managers/userHWID/userHWID" &>/dev/null;     chmod +x ${varEntorno}/userHWID
 wget --no-cache -O ${varEntorno}/userTOKEN    "$url/user-managers/userTOKEN/userTOKEN" &>/dev/null;   chmod +x ${varEntorno}/userTOKEN
 
+wget --no-cache -O ${autoStart}/limit    "$url/user-managers/limitador/limit" &>/dev/null;   chmod +x ${autoStart}/limit
+
 wget --no-cache -O /etc/ADMRufu/uninstall "https://github.com/rudi9999/ADMRufu/raw/main/uninstall" &>/dev/null; chmod +x /etc/ADMRufu/uninstall
 
 if [[ -e $autoStart/autoStart ]]; then
