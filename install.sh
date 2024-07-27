@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 module="$(pwd)/module"
@@ -64,7 +65,7 @@ repo_install(){
 }
 
 dependencias(){
-  soft="sudo bsdmainutils zip unzip ufw curl python python3 python3-pip openssl screen cron iptables lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat sqlite3 libsqlite3-dev"
+  soft="sudo bsdmainutils zip unzip ufw curl python python3 python3-pip openssl screen cron iptables lsof nano at mlocate gawk grep bc jq curl npm nodejs socat netcat netcat-traditional net-tools cowsay figlet lolcat sqlite3 libsqlite3-dev locales"
 
   for install in $soft; do
     leng="${#install}"
@@ -326,7 +327,9 @@ ln -s /etc/ADMRufu/reseller /etc/ADMRufu/tmp/message.txt
 sed -i '/Rufu/d' /etc/bash.bashrc
 sed -i '/Rufu/d' /root/.bashrc
 echo '[[ -e /etc/ADMRufu/bashrc ]] && source /etc/ADMRufu/bashrc' >> /etc/bash.bashrc
-update-locale LANG=en_US.UTF-8 LANGUAGE=en
+locale-gen en_US.UTF-8
+update-locale LANG=en_US.UTF-8 LANGUAGE=en LC_ALL=en_US.UTF-8
+echo -e "LANG=en_US.UTF-8\nLANGUAGE=en\nLC_ALL=en_US.UTF-8" > /etc/default/locale
 [[ ! $(cat /etc/shells|grep "/bin/false") ]] && echo -e "/bin/false" >> /etc/shells
 clear
 title "-- ADMRufu INSTALADO --"
