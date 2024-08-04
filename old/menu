@@ -383,8 +383,8 @@ contador(){
 	time=$(date +%s)
 	[[ -e /etc/openvpn/openvpn-status.log ]] && ovpn_log=$(cat /etc/openvpn/openvpn-status.log)
 
-	n='0'
-	i='0'
+	#n='0'
+	#i='0'
 	conect='0'
 	for _user in $users; do
 		[[ -z "$(ps -u $_user|grep sshd)" ]] && sqd=0 || sqd=1
@@ -394,11 +394,17 @@ contador(){
         conex=$(($sqd + $ovp + $drop))
         [[ $conex -ne 0 ]] && let conect++
 
-		if [[ $(chage -l $_user |grep 'Account expires' |awk -F ': ' '{print $2}') != never ]]; then
-			[[ $time -gt $(date '+%s' -d "$(chage -l $_user |grep "Account expires" |awk -F ': ' '{print $2}')") ]] && let n++
-		fi
+		#if [[ $(chage -l $_user |grep 'Account expires' |awk -F ': ' '{print $2}') != never ]]; then
+		#	[[ $time -gt $(date '+%s' -d "$(chage -l $_user |grep "Account expires" |awk -F ': ' '{print $2}')") ]] && let n++
+		#fi
+
 		[[ $(passwd --status $_user|cut -d ' ' -f2) = "L" ]] && let i++
 	done
+
+	_allUsers=$(user-info -a|awk '{print $4,$5,$6}'|grep -w 'Exp\|LOK')
+
+	n=$(echo "$_allUsers"|grep -c 'Exp')
+	i=$(echo "$_allUsers"|grep -c 'LOK')
 
 	_onlin=$(printf '%-7s' "$conect")
 	_userexp=$(printf '%-7s' "$n")
