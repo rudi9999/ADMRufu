@@ -398,7 +398,7 @@ contador(){
 		#	[[ $time -gt $(date '+%s' -d "$(chage -l $_user |grep "Account expires" |awk -F ': ' '{print $2}')") ]] && let n++
 		#fi
 
-		[[ $(passwd --status $_user|cut -d ' ' -f2) = "L" ]] && let i++
+		#[[ $(passwd --status $_user|cut -d ' ' -f2) = "L" ]] && let i++
 	done
 
 	_allUsers=$(user-info -a|awk '{print $4,$5,$6}'|grep -w 'Exp\|LOK')
