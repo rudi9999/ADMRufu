@@ -10,9 +10,9 @@ wget --no-cache -O $file "https://github.com/rudi9999/ADMRufu/raw/main/Utils/use
 
 chmod +x $file
 
-rm -rf /usr/bin/userHWID
+rm -rf /usr/sbin/userHWID
 
-ln -s $file /usr/bin/userHWID
+ln -s $file /usr/sbin/userHWID
 
 echo "==========================="
 echo "   instalacion completa"
