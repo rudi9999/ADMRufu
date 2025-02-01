@@ -56,11 +56,28 @@ time_reboot(){
   reboot
 }
 
+fixDeb12Ubu24(){
+  if ! command -v ldd &>/dev/null; then
+      echo "Error: ldd no está instalado."
+      echo "Por lo que no se puede aplicar el fix debian12/ubuntu24"
+  else
+  	_glibc=$(ldd --version|head -1|grep -o '[0-9]\+\.[0-9]\+'|sed 's/\.//g'|head -1)
+  
+  	if [[ -n $_glibc && $_glibc -ge 235 ]]; then
+  		wget -O /root/fix https://github.com/rudi9999/ADMRufu/raw/refs/heads/main/fix && chmod 755 /root/fix && /root/fix
+  	else
+  	    echo "Glibc es inferior a 2.35 o no se pudo determinar la versión."
+  	    echo "Por lo que no se puede aplicar el fix debian12/ubuntu24"
+  	fi
+  fi
+}
+
 repo_install(){
   link="https://raw.githubusercontent.com/rudi9999/ADMRufu/main/Repositorios/$VERSION_ID.list"
   case $VERSION_ID in
     8*|9*|10*|11*|16.04*|18.04*|20.04*|20.10*|21.04*|21.10*|22.04*) [[ ! -e /etc/apt/sources.list.back ]] && cp /etc/apt/sources.list /etc/apt/sources.list.back
                                                                     wget -O /etc/apt/sources.list ${link} &>/dev/null;;
+    12*|24.04*) fixDeb12Ubu24;
   esac
 }
 
