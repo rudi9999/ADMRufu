@@ -76,7 +76,7 @@ repo_install(){
   case $VERSION_ID in
     8*|9*|10*|11*|16.04*|18.04*|20.04*|20.10*|21.04*|21.10*|22.04*) [[ ! -e /etc/apt/sources.list.back ]] && cp /etc/apt/sources.list /etc/apt/sources.list.back
                                                                     wget -O /etc/apt/sources.list ${link} &>/dev/null;;
-    12*|24.04*) fixDeb12Ubu24;
+    12*|24.04*) fixDeb12Ubu24;;
   esac
 }
 
