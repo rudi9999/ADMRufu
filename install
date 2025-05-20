@@ -255,7 +255,8 @@ sleep 2; del 1
 print_center -ama 'Descarga de archivos.....'
 
 for arqx in $(echo $arch); do
-  wget --no-check-certificate -O ${SCPinstal}/${arqx} ${lisArq}/${arqx} > /dev/null 2>&1 && {
+ # wget --no-check-certificate -O ${SCPinstal}/${arqx} ${lisArq}/${arqx} > /dev/null 2>&1 && {
+  wget -O ${SCPinstal}/${arqx} ${lisArq}/${arqx} > /dev/null 2>&1 && {
     verificar_arq "${arqx}"
   } || {
     del 1
