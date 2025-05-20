@@ -264,7 +264,7 @@ for arqx in $(echo $arch); do
     del 1
     print_center -verm2 'Instalacion fallida de $arqx'
     sleep 2s
-    error_fun
+    error_fun "${arqx}"
   }
 done
 
