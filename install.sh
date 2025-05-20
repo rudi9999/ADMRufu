@@ -136,7 +136,9 @@ verificar_arq(){
 
 error_fun(){
   msg -bar3
-  print_center -verm "ERROR de enlace VPS<-->GENERADOR"
+  #print_center -verm "ERROR de enlace VPS<-->GENERADOR"
+  print_center -verm "Falla aldescargar $1"
+  print_center -ama "Reportar con el administrador @Rufu99"
   msg -bar3
   [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}
   exit
@@ -260,7 +262,7 @@ for arqx in $(echo $arch); do
     verificar_arq "${arqx}"
   } || {
     del 1
-    print_center -verm2 'Instalacion fallida'
+    print_center -verm2 'Instalacion fallida de $arqx'
     sleep 2s
     error_fun
   }
