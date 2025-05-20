@@ -241,7 +241,7 @@ wireguard.sh
 ws-cdn.sh
 WS-Proxy.js'
 
-lisArq="https://raw.githubusercontent.com/rudi9999/ADMRufu/main/old"
+lisArq="https://raw.githubusercontent.com/rudi9999/ADMRufu/refs/heads/main/old"
 
 ver=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/ADMRufu/main/vercion")
 echo "$ver" > ${ADMRufu}/vercion
